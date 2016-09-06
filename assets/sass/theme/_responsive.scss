@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+	.cbp-fbscroller {
+		nav {
+			display: none;
+		}
+	}
+	.logo {
+		width: 200px;
+	}
+	#fbsection1 {
+		.copy {
+			text-align: center;
+			margin-top: 50px;
+			h3 {
+				font-size: 24pt;
+			}
+			font-size: 14pt;
+		}
+	}
+	#download {
+		a {
+			display: block;
+			margin-bottom: 25px;
+		}
+	}
+	#fbsection2, #fbsection3, #fbsection4, #fbsection5, .navigation {
+		display: none;
+	}
+}

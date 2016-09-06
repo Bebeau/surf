@@ -1,0 +1,67 @@
+.image-placeholder {
+  border: 1px dashed #999999;
+  padding: 5px;
+  box-sizing: border-box;
+  max-width: 400px;
+  height: auto;
+  margin: 15px 0;
+  min-height: 100px; }
+  .image-placeholder img {
+    max-width: 100%;
+    height: auto; }
+
+#MailChimp {
+  margin-bottom: 25px; }
+  #MailChimp label {
+    display: block; }
+  #MailChimp input {
+    display: block;
+    width: 400px;
+    line-height: 40px;
+    height: 40px; }
+
+#banner .inside {
+  margin: 0;
+  padding: 0; }
+  #banner .inside li {
+    margin: 0 0 -4px;
+    padding: 0; }
+#banner .upload-banner {
+  margin: 1em;
+  display: block; }
+#banner .bannerWrap {
+  margin: 0;
+  padding: 0; }
+  #banner .bannerWrap.logoWrap {
+    background: black;
+    position: relative; }
+    #banner .bannerWrap.logoWrap img {
+      max-width: 75%;
+      margin: 0 auto;
+      display: block;
+      box-sizing: border-box;
+      padding: 25px 0; }
+#banner img {
+  max-width: 100%; }
+
+.bannerWrap:hover {
+  cursor: move; }
+  .bannerWrap:hover .button-remove {
+    opacity: 1; }
+.bannerWrap .button-remove {
+  opacity: 0;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: red;
+  font-weight: bold;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none; }

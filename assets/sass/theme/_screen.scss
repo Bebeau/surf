@@ -1,0 +1,547 @@
+$red: #ed1b24;
+
+$facebook: #3b5998;
+$twitter: #00aced;
+$pinterest: #C92228;
+$instagram: #125688;
+$youtube: #bb0000;
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('assets/fonts/Brandon_bld.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ventor';
+  src: url('assets/fonts/texgyreadventor-regular.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+body,html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Ventor';
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-font-smoothing: antialiased !important;
+	-o-font-smoothing: antialiased !important;
+	font-smoothing: antialiased !important;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.04);
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Brandon';
+}
+h2 {
+	font-size: 36pt;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin: 0;
+	text-align: right;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+* {
+	vertical-align: middle;
+}
+.outer {
+	/* W3C */
+	display: inline-flex !important;
+    box-pack: center !important;
+    box-align: center !important;
+	/* Safari, Opera, and Chrome */
+	display: -webkit-inline-flex !important;
+	-webkit-box-pack: center !important;
+	-webkit-box-align: center !important;
+	-webkit-align-items: center !important;
+	 /* Firefox */
+	display: -moz-inline-flexbox !important;
+	-moz-box-pack: center !important;
+	-moz-box-align: center !important;
+	-moz-align-items: center !important;
+	height: 100%;
+	width: 100%;
+	align-items: center !important;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+	.inner {
+		margin: auto 0;
+		width: 100%;
+	}
+}
+ul {
+	margin: 0;
+	padding: 0;
+	li {
+		line-height: 30px;
+	}
+}
+.navigation {
+	background: black;
+	padding: 15px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 9999;
+	@include transform(translateY(-70px));
+	@include transition(transform 0.5s $authenticMotion);
+	&.in {
+		@include transform(translateY(0px));
+		@include transition(transform 0.5s $authenticMotion);
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		box-sizing: border-box;
+		padding: 0 300px 0 100px;
+		li {
+			width: 20%;
+			display: inline-block;
+			margin: 0 0 0 -4px;
+			a {
+				display: block;
+				text-align: center;
+				line-height: 40px;
+				text-transform: uppercase;
+				font-size: 16pt;
+				font-family: 'Brandon';
+				color: darken(white, 10%);
+				text-decoration: none !important;
+				@include transition(all 0.5s $authenticMotion);
+				&:hover, &:active, &:focus, &:over {
+					cursor: pointer;
+					text-decoration: none !important;
+					color: white;
+					@include transition(all 0.5s $authenticMotion);
+				}
+				&.selected {
+					color: white;
+				}
+			}
+		}
+	}
+	.logo {
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		width: auto;
+		img {
+			height: 40px;
+		}
+	}
+	.app {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 300px;
+		a {
+			width: 48%;
+			display: inline-block;
+			&:last-child {
+				float: right;
+			}
+		}
+	}
+}
+.logo {
+	width: 400px;
+	height: auto;
+}
+.image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: auto 440px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+.videoWrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	overflow: hidden;
+	z-index: 1;
+	video {
+		width: 250px;
+		height: 440px;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-49%,-50%));
+	}
+}
+#fbsection1 {
+	text-align: center;
+	background: url('assets/images/bg.jpg') no-repeat scroll center / cover;
+	z-index: 10;
+	.outer {
+		background: linear-gradient(rgba(0,0,0,0.5), black);
+	}
+	.copy {
+		color: white;
+		text-align: left;
+		font-size: 18pt;
+		h3 {
+			font-size: 36pt;
+		}
+	}
+	#download {
+		margin-top: 25px;
+	}
+}
+#fbsection2 {
+	color: white;
+	background: url('assets/images/phone_white.svg') no-repeat fixed center / contain black;
+	background-size: auto 600px;
+}
+#fbsection3 {
+	background: url('assets/images/phone.svg') no-repeat fixed center / contain white;
+	background-size: auto 600px;
+}
+#fbsection4 {
+	background: url('assets/images/phone_white.svg') no-repeat fixed center / contain $red;
+	background-size: auto 600px;
+	color: white;
+}
+#fbsection5 {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+	color: white;
+	z-index: 10;
+	.outer {
+		z-index: 3;
+	}
+	h2 {
+		text-align: center;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		background: linear-gradient(rgba(0,0,0,0.5), black);
+		z-index: 2;
+	}
+	#instafeed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		line-height: 0;
+		-webkit-column-count: 4;
+		-webkit-column-gap: 0;
+		-moz-column-count: 4;
+		-moz-column-gap: 0;
+		column-count: 4;
+		column-gap: 0;
+		z-index: 1;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+.col-sm-4 {
+	height: 600px;
+}
+
+html, body, 
+.container,
+.cbp-fbscroller,
+.cbp-fbscroller section { 
+	height: 100%; 
+}
+
+.cbp-fbscroller {
+	nav {
+		position: fixed;
+		z-index: 9999;
+		right: 25px;
+		top: 50%;
+		width: 26px;
+		@include transform(translateY(-50%));
+		a {
+			display: block;
+			position: relative;
+			z-index: 9999;
+			color: transparent;
+			width: 26px;
+			height: 26px;
+			outline: none;
+			margin: 25px 0;
+			border-radius: 50%;
+			border: 4px solid darken(white, 10%);
+			@include transition(transform 0.3s $authenticMotion);
+			&:hover {
+				background: rgba(255,255,255,0.6);
+				@include transition(transform 0.3s $authenticMotion);
+			}
+			&.cbp-fbcurrent {
+				background: darken(white, 10%);
+				@include transition(transform 0.3s $authenticMotion);
+			}
+		}
+	}
+}
+
+.cbp-fbscroller section {
+	position: relative;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.no-touch .cbp-fbscroller section {
+	background-attachment: fixed;
+}
+
+#fbsection5 {
+	position: relative;
+	z-index: 10;
+	#contactfrm {
+		box-sizing: border-box;
+		padding: 0 25px;
+		border: 1px solid white;
+		background: rgba(0,0,0,0.8);
+		margin-top: 25px;
+		&:after {
+			content: "";
+			clear: both;
+			display: block;
+		}
+	}
+	.half {
+		margin: 0;
+		padding: 25px 0;
+		input {
+			width: 48%;
+			display: inline-block;
+			box-sizing: border-box;
+			border: none;
+			border-bottom: 1px solid white;
+			font-size: 18pt;
+			height: 60px;
+			line-height: 60px;
+			background: transparent;
+			padding: 0 10px;
+			color: white;
+			box-shadow: 0 0 0 0;
+			@include border-top-radius(0);
+			@include border-bottom-radius(0);
+			&:last-child {
+				float: right;
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+	textarea {
+		width: 100%;
+		min-width: 100%;
+		max-width: 100%;
+		min-height: 150px;
+		font-size: 16pt;
+		border: none;
+		background: transparent;
+		border: 1px solid white;
+		padding: 10px;
+		margin-top: 25px;
+		color: white;
+		@include transition(all 0.5s $easeInOutBack);
+		@include border-top-radius(0);
+		@include border-bottom-radius(0);
+		&:focus {
+			outline: none;
+			min-height: 250px;
+			@include transition(all 0.5s $easeInOutBack);
+		}
+	}
+	.btn-submit {
+		float: right;
+		margin-top: 25px;
+		width: 200px;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 24px;
+		letter-spacing: 3px;
+		@include border-top-radius(0);
+		@include border-bottom-radius(0);
+		background: transparent;
+		border: 1px solid white;
+		color: white;
+		i {
+			padding-right: 10px;
+			margin: 0 10px 0 0;
+			padding: 0;
+		}
+		&.success {
+			background: linear-gradient(green, darken(green, 5%));
+			i {
+				padding: 0;
+				margin: 0;
+			}
+		}
+		&.error {
+			background: linear-gradient(red, darken(red, 5%));
+			i {
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+	#dropdown {
+		position: relative;
+		width: 48%;
+		height: 60px;
+		line-height: 60px;
+		float: right;
+		button {
+			border: none;
+			background: transparent;
+			text-align: left;
+			display: block;
+			width: 100%;
+			height: 60px;
+			line-height: 60px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: white;
+			font-size: 18pt;
+			padding: 0 10px;
+			border-bottom: 1px solid white;
+			i {
+				float: right;
+				margin-top: 15px;
+			}
+			&.selected {
+				color: white;
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+		ul {
+			opacity: 0;
+			height: 0;
+			overflow: hidden;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			background: white;
+			border: 1px solid black;
+			border-top: none;
+			box-sizing: border-box;
+			@include transition(all 0.3s $easeInOutBack);
+			li {
+				font-size: 14pt;
+				line-height: 40px;
+				display: block;
+				padding: 0 10px;
+				color: black;
+				&:hover {
+					color: black;
+					background: darken(white, 5%);
+					cursor: pointer;
+				}
+			}
+			&.show {
+				opacity: 1;
+				height: 280px;
+				@include transition(all 0.3s $easeInOutBack);
+			}
+		}
+	}
+}
+.btn {
+	background: transparent;
+	text-align: center;
+	display: block;
+	width: 200px;
+	margin: 25px auto;
+	height: 60px;
+	line-height: 60px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: white;
+	font-size: 18pt;
+	padding: 0 10px;
+	border: 1px solid white;
+	@include border-top-radius(0);
+	@include border-bottom-radius(0);
+	&:hover {
+		cursor: pointer;
+		color: white;
+	}
+}
+.socialWrap {
+	margin-top: 25px;
+	display: block;
+	line-height: normal;
+	vertical-align: top;
+	text-align: center;
+	@include transition(all, 0.3s, ease-in-out);
+	a {
+		width: 40px;
+		height: 40px;
+		line-height: 33px;
+		display: inline-block;
+		font-size: 16pt;
+		margin: 0 5px;
+		color: white;
+		@include border-top-radius(50%);
+		@include border-bottom-radius(50%);
+		&.facebook {
+			background: $facebook;
+			&:hover {
+				background: lighten($facebook, 10%);
+			}
+		}
+		&.twitter {
+			background: $twitter;
+			&:hover {
+				background: lighten($twitter, 10%);
+			}
+		}
+		&.instagram {
+			background: $instagram;
+			&:hover {
+				background: lighten($instagram, 10%);
+			}
+		}
+		&.pinterest {
+			background: $pinterest;
+			&:hover {
+				background: lighten($pinterest, 10%);
+			}
+		}
+		&.youtube {
+			background: $youtube;
+			&:hover {
+				background: lighten($youtube, 10%);
+			}
+		}
+	}
+}

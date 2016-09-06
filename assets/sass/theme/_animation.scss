@@ -1,0 +1,84 @@
+[data-animation="slideUp"] {
+		display: block;
+		position: relative;
+		opacity: 0;
+		@include transform(translate(0,200px));
+		@include transition(transform, 1s, $easeInOutBack);
+	&.slideIn {
+		opacity: 1;
+		@include transform(translate(0,0));
+		@include transition(transform, 1s, $easeInOutBack);
+	}
+}
+[data-animation="slideDown"] {
+	position: relative;
+	opacity: 0;
+	@include transform(translate(0,-50px));
+	@include transition(transform, 0.5s, $easeInOutBack);
+	&.slideIn {
+		opacity: 1;
+		@include transform(translate(0,0));
+		@include transition(transform 0.5s $easeInOutBack);
+	}
+}
+[data-animation="slideInLeft"] {
+	position: relative;
+	@include transform(translate(-200%,0));
+	@include transition(transform 1s $easeInOutBack);
+	&.slideIn {
+		@include transform(translate(0,0));
+		@include transition(transform 1s $easeInOutBack);
+	}
+}
+[data-animation="slideInRight"] {
+	position: relative;
+	@include transform(translate(200%,0));
+	@include transition(transform 1s $easeInOutBack);
+	&.slideIn {
+		@include transform(translate(0,0));
+		@include transition(transform 1s $easeInOutBack);
+	}
+}
+[data-animation="bubble"] {
+	box-sizing: border-box;
+	opacity: 0;
+	@include transform(scale(.75));
+	@include transition(transform 0.5s $easeInOutBack);
+	&.load {
+		opacity: 1;
+		@include transform(scale(1));
+		@include transition(transform 0.5s $easeInOutBack);
+	}
+
+}
+@media (max-width: 1200px) {
+}
+@media (max-width: 992px) {
+}
+@media (max-width:768px) {
+	[data-animation="slideUp"] {
+		opacity: 1;
+		@include transform(translate(0,0));
+		@include transition(transform 0.5s $easeInOutBack);
+	}
+	[data-animation="textFade"] {
+		opacity: 1;
+		@include transform(scale(1));
+		@include transform(translate(0,0));
+	}
+	[data-animation="slideDown"] {
+		opacity: 1;
+		@include transform(translate(0,0));
+		@include transition(transform 0.5s $easeInOutBack);
+	}
+	[data-animation="slideInLeft"] {
+		@include transform(translate(0,0));
+	}
+	[data-animation="slideInRight"] {
+		@include transform(translate(0,0));
+	}
+	[data-animation="bubble"] {
+		opacity: 1;
+		@include transform(scale(1));
+	}
+}

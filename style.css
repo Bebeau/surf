@@ -23,9 +23,9 @@ Author URI: http://theinitgroup.com
   -ms-transform: translate(0, 200px);
   -o-transform: translate(0, 200px);
   transform: translate(0, 200px);
-  -webkit-transition: -webkit-transform, 1s, cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -moz-transition: -moz-transform, 1s, cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: transform, 1s, cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  -webkit-transition: -webkit-transform, 0.5s, cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: -moz-transform, 0.5s, cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform, 0.5s, cubic-bezier(0.68, -0.55, 0.265, 1.55); }
   [data-animation="slideUp"].slideIn {
     opacity: 1;
     -webkit-transform: translate(0, 0);
@@ -33,9 +33,9 @@ Author URI: http://theinitgroup.com
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
     transform: translate(0, 0);
-    -webkit-transition: -webkit-transform, 1s, cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    -moz-transition: -moz-transform, 1s, cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition: transform, 1s, cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    -webkit-transition: -webkit-transform, 0.5s, cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: -moz-transform, 0.5s, cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: transform, 0.5s, cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
 [data-animation="slideDown"] {
   position: relative;
@@ -207,7 +207,7 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   font-size: 36pt;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   margin: 0;
   text-align: right; }
 
@@ -251,7 +251,6 @@ ul {
 
 .navigation {
   background: black;
-  padding: 15px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -277,9 +276,9 @@ ul {
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
   .navigation ul {
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
     box-sizing: border-box;
-    padding: 0 300px 0 100px; }
+    width: 800px; }
     .navigation ul li {
       width: 20%;
       display: inline-block;
@@ -289,7 +288,8 @@ ul {
         text-align: center;
         line-height: 40px;
         text-transform: uppercase;
-        font-size: 16pt;
+        font-size: 10pt;
+        letter-spacing: 2px;
         font-family: 'Brandon';
         color: #e6e6e6;
         text-decoration: none !important;
@@ -307,24 +307,29 @@ ul {
           color: white; }
   .navigation .logo {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 5px;
+    left: 5px;
     width: auto; }
     .navigation .logo img {
-      height: 40px; }
+      height: 25px; }
   .navigation .app {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 300px; }
+    top: 6px;
+    right: 5px; }
     .navigation .app a {
       width: 48%;
       display: inline-block; }
+      .navigation .app a:first-child {
+        margin-right: 5px; }
       .navigation .app a:last-child {
         float: right; }
+      .navigation .app a svg g, .navigation .app a svg path, .navigation .app a svg text, .navigation .app a svg tspan {
+        fill: white; }
+      .navigation .app a svg use {
+        stroke: white; }
 
 .logo {
-  width: 400px;
+  width: 350px;
   height: auto; }
 
 .image {
@@ -333,7 +338,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: auto 440px;
+  background-size: auto 360px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; }
@@ -368,24 +373,42 @@ ul {
   #fbsection1 .copy {
     color: white;
     text-align: left;
-    font-size: 18pt; }
+    font-size: 14pt; }
     #fbsection1 .copy h3 {
-      font-size: 36pt; }
+      font-size: 36pt;
+      text-transform: uppercase; }
   #fbsection1 #download {
     margin-top: 25px; }
+    #fbsection1 #download a {
+      display: inline-block; }
+      #fbsection1 #download a:last-child {
+        margin-left: 15px; }
+  #fbsection1 .col-sm-4 {
+    height: auto; }
+  #fbsection1 svg {
+    border: 1px solid white;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px; }
+    #fbsection1 svg g, #fbsection1 svg path, #fbsection1 svg text, #fbsection1 svg tspan {
+      fill: white; }
+    #fbsection1 svg use {
+      stroke: white;
+      display: none; }
 
 #fbsection2 {
   color: white;
   background: url("assets/images/phone_white.svg") no-repeat fixed center/contain black;
-  background-size: auto 600px; }
+  background-size: auto 500px; }
 
 #fbsection3 {
   background: url("assets/images/phone.svg") no-repeat fixed center/contain white;
-  background-size: auto 600px; }
+  background-size: auto 500px; }
 
 #fbsection4 {
   background: url("assets/images/phone_white.svg") no-repeat fixed center/contain #ed1b24;
-  background-size: auto 600px;
+  background-size: auto 500px;
   color: white; }
 
 #fbsection5 {
@@ -438,7 +461,7 @@ html, body,
 .cbp-fbscroller nav {
   position: fixed;
   z-index: 9999;
-  right: 25px;
+  right: 15px;
   top: 50%;
   width: 26px;
   -webkit-transform: translateY(-50%);
@@ -451,12 +474,12 @@ html, body,
     position: relative;
     z-index: 9999;
     color: transparent;
-    width: 26px;
-    height: 26px;
+    width: 15px;
+    height: 15px;
     outline: none;
     margin: 25px 0;
     border-radius: 50%;
-    border: 4px solid #e6e6e6;
+    border: 1px solid #e6e6e6;
     -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     -moz-transition: -moz-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -480,29 +503,28 @@ html, body,
 .no-touch .cbp-fbscroller section {
   background-attachment: fixed; }
 
-#fbsection5 {
+#fbsection6 {
   position: relative;
-  z-index: 10; }
-  #fbsection5 #contactfrm {
+  z-index: 10;
+  background: black; }
+  #fbsection6 #contactfrm {
     box-sizing: border-box;
     padding: 0 25px;
-    border: 1px solid white;
-    background: rgba(0, 0, 0, 0.8);
     margin-top: 25px; }
-    #fbsection5 #contactfrm:after {
+    #fbsection6 #contactfrm:after {
       content: "";
       clear: both;
       display: block; }
-  #fbsection5 .half {
+  #fbsection6 .half {
     margin: 0;
-    padding: 25px 0; }
-    #fbsection5 .half input {
+    padding: 10px 0; }
+    #fbsection6 .half input {
       width: 48%;
       display: inline-block;
       box-sizing: border-box;
       border: none;
       border-bottom: 1px solid white;
-      font-size: 18pt;
+      font-size: 16pt;
       height: 60px;
       line-height: 60px;
       background: transparent;
@@ -513,11 +535,11 @@ html, body,
       border-top-right-radius: 0;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0; }
-      #fbsection5 .half input:last-child {
+      #fbsection6 .half input:last-child {
         float: right; }
-      #fbsection5 .half input:focus {
+      #fbsection6 .half input:focus {
         outline: none; }
-  #fbsection5 textarea {
+  #fbsection6 textarea {
     width: 100%;
     min-width: 100%;
     max-width: 100%;
@@ -527,7 +549,7 @@ html, body,
     background: transparent;
     border: 1px solid white;
     padding: 10px;
-    margin-top: 25px;
+    margin-top: 35px;
     color: white;
     -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -536,19 +558,19 @@ html, body,
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0; }
-    #fbsection5 textarea:focus {
+    #fbsection6 textarea:focus {
       outline: none;
       min-height: 250px;
       -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-  #fbsection5 .btn-submit {
+  #fbsection6 .btn-submit {
     float: right;
     margin-top: 25px;
     width: 200px;
     text-align: center;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 18px;
     letter-spacing: 3px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -557,27 +579,27 @@ html, body,
     background: transparent;
     border: 1px solid white;
     color: white; }
-    #fbsection5 .btn-submit i {
+    #fbsection6 .btn-submit i {
       padding-right: 10px;
       margin: 0 10px 0 0;
       padding: 0; }
-    #fbsection5 .btn-submit.success {
+    #fbsection6 .btn-submit.success {
       background: linear-gradient(green, #006700); }
-      #fbsection5 .btn-submit.success i {
+      #fbsection6 .btn-submit.success i {
         padding: 0;
         margin: 0; }
-    #fbsection5 .btn-submit.error {
+    #fbsection6 .btn-submit.error {
       background: linear-gradient(red, #e60000); }
-      #fbsection5 .btn-submit.error i {
+      #fbsection6 .btn-submit.error i {
         padding: 0;
         margin: 0; }
-  #fbsection5 #dropdown {
+  #fbsection6 #dropdown {
     position: relative;
     width: 48%;
     height: 60px;
     line-height: 60px;
     float: right; }
-    #fbsection5 #dropdown button {
+    #fbsection6 #dropdown button {
       border: none;
       background: transparent;
       text-align: left;
@@ -588,17 +610,17 @@ html, body,
       text-transform: uppercase;
       letter-spacing: 1px;
       color: white;
-      font-size: 18pt;
+      font-size: 16pt;
       padding: 0 10px;
       border-bottom: 1px solid white; }
-      #fbsection5 #dropdown button i {
+      #fbsection6 #dropdown button i {
         float: right;
         margin-top: 15px; }
-      #fbsection5 #dropdown button.selected {
+      #fbsection6 #dropdown button.selected {
         color: white; }
-      #fbsection5 #dropdown button:focus {
+      #fbsection6 #dropdown button:focus {
         outline: none; }
-    #fbsection5 #dropdown ul {
+    #fbsection6 #dropdown ul {
       opacity: 0;
       height: 0;
       overflow: hidden;
@@ -616,17 +638,17 @@ html, body,
       -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       -moz-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-      #fbsection5 #dropdown ul li {
+      #fbsection6 #dropdown ul li {
         font-size: 14pt;
         line-height: 40px;
         display: block;
         padding: 0 10px;
         color: black; }
-        #fbsection5 #dropdown ul li:hover {
+        #fbsection6 #dropdown ul li:hover {
           color: black;
           background: #f2f2f2;
           cursor: pointer; }
-      #fbsection5 #dropdown ul.show {
+      #fbsection6 #dropdown ul.show {
         opacity: 1;
         height: 280px;
         -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -661,41 +683,53 @@ html, body,
   line-height: normal;
   vertical-align: top;
   text-align: center;
-  -webkit-transition: all, 0.3s, ease-in-out;
-  -moz-transition: all, 0.3s, ease-in-out;
-  transition: all, 0.3s, ease-in-out; }
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
   .socialWrap a {
     width: 40px;
     height: 40px;
-    line-height: 33px;
+    line-height: 28px;
     display: inline-block;
     font-size: 16pt;
     margin: 0 5px;
     color: white;
+    border: 2px solid white;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%; }
-    .socialWrap a.facebook {
-      background: #3b5998; }
-      .socialWrap a.facebook:hover {
-        background: #4c70ba; }
-    .socialWrap a.twitter {
-      background: #00aced; }
-      .socialWrap a.twitter:hover {
-        background: #21c2ff; }
-    .socialWrap a.instagram {
-      background: #125688; }
-      .socialWrap a.instagram:hover {
-        background: #1872b5; }
-    .socialWrap a.pinterest {
-      background: #C92228; }
-      .socialWrap a.pinterest:hover {
-        background: #df3f45; }
-    .socialWrap a.youtube {
-      background: #bb0000; }
-      .socialWrap a.youtube:hover {
-        background: #ee0000; }
+    .socialWrap a.facebook:hover {
+      background: #4c70ba; }
+    .socialWrap a.twitter:hover {
+      background: #21c2ff; }
+    .socialWrap a.instagram:hover {
+      background: #1872b5; }
+    .socialWrap a.pinterest:hover {
+      background: #df3f45; }
+    .socialWrap a.youtube:hover {
+      background: #ee0000; }
+
+.iphone ul li {
+  opacity: 0;
+  -webkit-transform: translate(50px, 0);
+  -moz-transform: translate(50px, 0);
+  -ms-transform: translate(50px, 0);
+  -o-transform: translate(50px, 0);
+  transform: translate(50px, 0);
+  -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+  .iphone ul li.in {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 
 @media (max-width: 768px) {
   .cbp-fbscroller nav {

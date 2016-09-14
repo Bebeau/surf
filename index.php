@@ -12,6 +12,7 @@ get_header();
 			echo '<a href="#fbsection3"></a>';
 			echo '<a href="#fbsection4"></a>';
 			echo '<a href="#fbsection5"></a>';
+			echo '<a href="#fbsection6"></a>';
 		echo '</nav>';
 
 		$args = array(
@@ -24,18 +25,14 @@ get_header();
 				echo '<div class="outer"><div class="inner">';
 					echo '<div class="container">';
 						echo '<div class="row">';
-							echo '<div class="col-sm-6">';
+							echo '<div class="col-sm-5 col-sm-offset-1">';
 								echo '<img class="logo" src="'.get_bloginfo('template_directory').'/assets/images/logo.svg" alt="Surf">';
 							echo '</div>';
-							echo '<div class="col-sm-6 copy">';
+							echo '<div class="col-sm-4 copy">';
 								the_content();
-								echo '<div class="row" id="download">';
-									echo '<div class="col-sm-6">';
-										echo '<a href="https://itunes.apple.com/us/app/surf-live/id1139012413?mt=8" target="_BLANK"><img class="logo" src="'.get_bloginfo('template_directory').'/assets/images/apple.png" alt="Surf"></a>';
-									echo '</div>';
-									echo '<div class="col-sm-6">';
-										echo '<a href="https://play.google.com/store/apps/details?id=com.surfliveinc.surf&hl=en" target="_BLANK"><img class="logo" src="'.get_bloginfo('template_directory').'/assets/images/android.png" alt="Surf"></a>';
-									echo '</div>';
+								echo '<div id="download">';
+									echo '<a href="https://itunes.apple.com/us/app/surf-live/id1139012413?mt=8" target="_BLANK"><img class="svg" src="'.get_bloginfo('template_directory').'/assets/images/apple_large.svg" alt="Surf"></a>';
+									echo '<a href="https://play.google.com/store/apps/details?id=com.surfliveinc.surf&hl=en" target="_BLANK"><img class="svg" src="'.get_bloginfo('template_directory').'/assets/images/android_large.svg" alt="Surf"></a>';
 								echo '</div>';
 							echo '</div>';
 						echo '</div>';
@@ -75,7 +72,7 @@ get_header();
 						echo '<div class="row">';
 							echo '<div class="col-sm-4" data-animation="slideUp">';
 								echo '<div class="outer"><div class="inner">';
-									the_title("<h2>","</h2>");
+									the_title("<h2 data-animation='slideUp'>","</h2>");
 								echo '</div></div>';
 							echo '</div>';
 							echo '<div class="col-sm-4 col-sm-offset-4" data-animation="slideUp">';
@@ -123,15 +120,20 @@ get_header();
 						<?php } ?>
 					</div>
 				<?php }
-				echo '<div class="container">';
+			echo '</div></div>';
+			echo '<div id="instafeed"></div>';
+		echo '</section>';
+
+		echo '<section id="fbsection6">';
+			echo '<div class="container">';
+				echo '<div class="outer"><div class="inner">';
 					echo '<div class="row">';
 						echo '<div class="col-sm-8 col-sm-offset-2">';
 							get_contactForm();
 						echo '</div>';
 					echo '</div>';
-				echo '</div>';
-			echo '</div></div>';
-			echo '<div id="instafeed"></div>';
+				echo '</div></div>';
+			echo '</div>';
 		echo '</section>';
 
 	echo '</div>'; ?>

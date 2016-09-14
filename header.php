@@ -105,8 +105,12 @@
 			<li><a href="#fbsection5">Contact</a></li>
 		</ul>
 		<div class="app">
-			<a href="https://itunes.apple.com/us/app/surf-live/id1139012413?mt=8" target="_BLANK"><img src="<?php echo bloginfo('template_directory');?>/assets/images/apple.png" alt="Surf"></a>
-			<a href="https://play.google.com/store/apps/details?id=com.surfliveinc.surf&hl=en" target="_BLANK"><img src="<?php echo bloginfo('template_directory');?>/assets/images/android.png" alt="Surf"></a>
+			<a href="https://itunes.apple.com/us/app/surf-live/id1139012413?mt=8" target="_BLANK">
+				<img class="svg" src="<?php echo bloginfo('template_directory');?>/assets/images/apple_small.svg" alt="Surf">
+			</a>
+			<a href="https://play.google.com/store/apps/details?id=com.surfliveinc.surf&hl=en" target="_BLANK">
+				<img class="svg" src="<?php echo bloginfo('template_directory');?>/assets/images/android_small.svg" alt="Surf">
+			</a>
 		</div>
 	</nav>
 </header>

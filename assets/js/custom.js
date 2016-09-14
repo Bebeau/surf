@@ -112,6 +112,57 @@ var init = {
 		init.instafeed();
 		init.scrollNav();
 		init.dropdown();
+		init.SVG();
+		init.animateList();
+	},
+	animateList: function() {
+		jQuery('section').each(function() {
+			if(move.isOnScreen(jQuery(this))) {
+				jQuery(this).find("li").each(function(index){
+					jQuery(this).delay(200*index).queue(function(){
+				   		jQuery(this).addClass("in");
+				   	});
+				});
+			} else {
+				jQuery(window).scroll(function(){
+					jQuery(this).find("li").each(function(index){
+						jQuery(this).delay(200*index).queue(function(){
+					   		jQuery(this).addClass("in");
+					   	});
+					});
+				});
+			}
+		});
+	},
+	SVG: function() {
+	    jQuery('img.svg').each(function() {
+	        var jQueryimg = jQuery(this);
+	        var imgID = jQueryimg.attr('id');
+	        var imgClass = jQueryimg.attr('class');
+	        var imgURL = jQueryimg.attr('src');
+
+	        jQuery.get(imgURL, function(data) {
+	            // Get the SVG tag, ignore the rest
+	            var jQuerysvg = jQuery(data).find('svg');
+
+	            // Add replaced image's ID to the new SVG
+	            if(typeof imgID !== 'undefined') {
+	                jQuerysvg = jQuerysvg.attr('id', imgID);
+	            }
+	            // Add replaced image's classes to the new SVG
+	            if(typeof imgClass !== 'undefined') {
+	                jQuerysvg = jQuerysvg.attr('class', imgClass+' replaced-svg');
+	            }
+
+	            // Remove any invalid XML tags as per http://validator.w3.org
+	            jQuerysvg = jQuerysvg.removeAttr('xmlns:a');
+
+	            // Replace image with new SVG
+	            jQueryimg.replaceWith(jQuerysvg);
+
+	        }, 'xml');
+
+	    });
 	},
 	dropdown: function() {
 		removeClass = false;
@@ -219,7 +270,7 @@ var init = {
 	contactBtn: function() {
 		jQuery('#contactfrm').submit(init.contactSubmit);
 	},
-}
+};
 
 jQuery(document).ready(function() {
 	move.onMove();

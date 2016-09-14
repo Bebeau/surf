@@ -3,11 +3,11 @@
 		position: relative;
 		opacity: 0;
 		@include transform(translate(0,200px));
-		@include transition(transform, 1s, $easeInOutBack);
+		@include transition(transform, 0.5s, $easeInOutBack);
 	&.slideIn {
 		opacity: 1;
 		@include transform(translate(0,0));
-		@include transition(transform, 1s, $easeInOutBack);
+		@include transition(transform, 0.5s, $easeInOutBack);
 	}
 }
 [data-animation="slideDown"] {

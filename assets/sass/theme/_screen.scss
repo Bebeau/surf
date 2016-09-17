@@ -66,7 +66,6 @@ img {
 	height: 100%;
 	width: 100%;
 	align-items: center !important;
-	overflow: hidden;
 	position: relative;
 	z-index: 2;
 	.inner {
@@ -78,7 +77,7 @@ ul {
 	margin: 0;
 	padding: 0;
 	li {
-		line-height: 30px;
+		line-height: 24px;
 	}
 }
 .navigation {
@@ -107,7 +106,7 @@ ul {
 			a {
 				display: block;
 				text-align: center;
-				line-height: 40px;
+				line-height: 60px;
 				text-transform: uppercase;
 				font-size: 10pt;
 				letter-spacing: 2px;
@@ -130,16 +129,16 @@ ul {
 	.logo {
 		position: absolute;
 		top: 5px;
-		left: 5px;
+		left: 25px;
 		width: auto;
 		img {
-			height: 25px;
+			height: 45px;
 		}
 	}
 	.app {
 		position: absolute;
 		top: 6px;
-		right: 5px;
+		right: 25px;
 		a {
 			width: 48%;
 			display: inline-block;
@@ -576,12 +575,12 @@ html, body,
 	ul {
 		li {
 			opacity: 0;
-			@include transform(translate(50px,0));
-			@include transition(all 0.3s $authenticMotion);
+			@include transform(translate(0,100px));
+			@include transition(all 0.2s $authenticMotion);
 			&.in {
 				opacity: 1;
 				@include transform(translate(0,0));
-				@include transition(all 0.3s $authenticMotion);
+				@include transition(all 0.2s $authenticMotion);
 			}
 		}
 	}

@@ -236,7 +236,6 @@ img {
   height: 100%;
   width: 100%;
   align-items: center !important;
-  overflow: hidden;
   position: relative;
   z-index: 2; }
   .outer .inner {
@@ -247,7 +246,7 @@ ul {
   margin: 0;
   padding: 0; }
   ul li {
-    line-height: 30px; }
+    line-height: 24px; }
 
 .navigation {
   background: black;
@@ -286,7 +285,7 @@ ul {
       .navigation ul li a {
         display: block;
         text-align: center;
-        line-height: 40px;
+        line-height: 60px;
         text-transform: uppercase;
         font-size: 10pt;
         letter-spacing: 2px;
@@ -308,14 +307,14 @@ ul {
   .navigation .logo {
     position: absolute;
     top: 5px;
-    left: 5px;
+    left: 25px;
     width: auto; }
     .navigation .logo img {
-      height: 25px; }
+      height: 45px; }
   .navigation .app {
     position: absolute;
     top: 6px;
-    right: 5px; }
+    right: 25px; }
     .navigation .app a {
       width: 48%;
       display: inline-block; }
@@ -712,14 +711,14 @@ html, body,
 
 .iphone ul li {
   opacity: 0;
-  -webkit-transform: translate(50px, 0);
-  -moz-transform: translate(50px, 0);
-  -ms-transform: translate(50px, 0);
-  -o-transform: translate(50px, 0);
-  transform: translate(50px, 0);
-  -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+  -webkit-transform: translate(0, 100px);
+  -moz-transform: translate(0, 100px);
+  -ms-transform: translate(0, 100px);
+  -o-transform: translate(0, 100px);
+  transform: translate(0, 100px);
+  -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
   .iphone ul li.in {
     opacity: 1;
     -webkit-transform: translate(0, 0);
@@ -727,9 +726,9 @@ html, body,
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
     transform: translate(0, 0);
-    -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    -moz-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
 
 @media (max-width: 768px) {
   .cbp-fbscroller nav {

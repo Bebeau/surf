@@ -75,7 +75,7 @@ get_header();
 									the_title("<h2 data-animation='slideUp'>","</h2>");
 								echo '</div></div>';
 							echo '</div>';
-							echo '<div class="col-sm-4 col-sm-offset-4" data-animation="slideUp">';
+							echo '<div class="col-sm-4 col-sm-offset-4">';
 								echo '<div class="outer"><div class="inner">';
 									the_content();
 								echo '</div></div>';

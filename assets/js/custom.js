@@ -113,23 +113,30 @@ var init = {
 		init.scrollNav();
 		init.dropdown();
 		init.SVG();
-		init.animateList();
+		init.list();
 	},
-	animateList: function() {
-		jQuery('section').each(function() {
-			if(move.isOnScreen(jQuery(this))) {
-				jQuery(this).find("li").each(function(index){
-					jQuery(this).delay(200*index).queue(function(){
-				   		jQuery(this).addClass("in");
+	list: function() {
+		var a = jQuery('#fbsection2');
+		var pos = a.position();
+		jQuery(window).scroll(function() {
+			var windowpos = jQuery(window).scrollTop();
+			if (windowpos >= pos.top - 300 ) {
+				a.find("li").each(function(index){
+					jQuery(this).delay(100*index).queue(function(){
+				   		jQuery(this).addClass("in").dequeue();
 				   	});
 				});
-			} else {
-				jQuery(window).scroll(function(){
-					jQuery(this).find("li").each(function(index){
-						jQuery(this).delay(200*index).queue(function(){
-					   		jQuery(this).addClass("in");
-					   	});
-					});
+			}
+		});
+		var b = jQuery('#fbsection3');
+		var pos = b.position();
+		jQuery(window).scroll(function() {
+			var windowpos = jQuery(window).scrollTop();
+			if (windowpos >= pos.top - 300 ) {
+				b.find("li").each(function(index){
+					jQuery(this).delay(100*index).queue(function(){
+				   		jQuery(this).addClass("in").dequeue();
+				   	});
 				});
 			}
 		});

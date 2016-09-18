@@ -98,7 +98,7 @@ ul {
 		list-style: none;
 		margin: 0 auto;
 		box-sizing: border-box;
-		width: 800px;
+		width: 600px;
 		li {
 			width: 20%;
 			display: inline-block;
@@ -129,7 +129,7 @@ ul {
 	.logo {
 		position: absolute;
 		top: 5px;
-		left: 25px;
+		left: 5px;
 		width: auto;
 		img {
 			height: 45px;
@@ -138,7 +138,7 @@ ul {
 	.app {
 		position: absolute;
 		top: 6px;
-		right: 25px;
+		right: 5px;
 		a {
 			width: 48%;
 			display: inline-block;
@@ -184,8 +184,8 @@ ul {
 	overflow: hidden;
 	z-index: 1;
 	video {
-		width: 250px;
-		height: 440px;
+		width: 210px;
+		height: auto;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -194,15 +194,22 @@ ul {
 }
 #fbsection1 {
 	text-align: center;
-	background: url('assets/images/bg.jpg') no-repeat scroll center / cover;
 	z-index: 10;
+	video {
+		width: 100%;
+		@include transform(translate(-50%,-50%));
+	}
 	.outer {
 		background: linear-gradient(rgba(0,0,0,0.5), black);
 	}
 	.copy {
 		color: white;
 		text-align: left;
-		font-size: 14pt;
+		font-size: 12pt;
+		margin: 10px 0;
+		p {
+			margin: 0;
+		}
 		h3 {
 			font-size: 36pt;
 			text-transform: uppercase;
@@ -277,11 +284,11 @@ ul {
 		right: 0;
 		bottom: 0;
 		line-height: 0;
-		-webkit-column-count: 4;
+		-webkit-column-count: 5;
 		-webkit-column-gap: 0;
-		-moz-column-count: 4;
+		-moz-column-count: 5;
 		-moz-column-gap: 0;
-		column-count: 4;
+		column-count: 5;
 		column-gap: 0;
 		z-index: 1;
 		img {
@@ -484,6 +491,8 @@ html, body,
 			border: 1px solid black;
 			border-top: none;
 			box-sizing: border-box;
+			@include border-top-radius(0);
+			@include border-bottom-radius(0);
 			@include transition(all 0.3s $easeInOutBack);
 			li {
 				font-size: 14pt;
@@ -575,6 +584,8 @@ html, body,
 	ul {
 		li {
 			opacity: 0;
+			line-height: 14pt;
+			margin-bottom: 5px;
 			@include transform(translate(0,100px));
 			@include transition(all 0.2s $authenticMotion);
 			&.in {
@@ -582,6 +593,18 @@ html, body,
 				@include transform(translate(0,0));
 				@include transition(all 0.2s $authenticMotion);
 			}
+		}
+	}
+	.sectionTitle {
+		text-align: right;
+	}
+	h2 {
+		display: inline-block;
+		text-align: left;
+		span {
+			display: block;
+			font-size: 16pt;
+			text-align: left;
 		}
 	}
 }

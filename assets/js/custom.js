@@ -114,26 +114,57 @@ var init = {
 		init.dropdown();
 		init.SVG();
 		init.list();
+		init.headerWrap();
+		init.playVideo();
+	},
+	playVideo: function() {
+		var vid = jQuery('.iphone video');
+		playing = false;
+		vid.each(function(){
+			jQuery(window).scroll(function() {
+				var vidpos = vid.position();
+				var windowpos = jQuery(window).scrollTop();
+				if (windowpos >= vidpos.top - 300 ) {
+					vid[0].play();
+		    		playing1 = true;
+				}
+			});
+		});
+	},
+	headerWrap: function() {
+		jQuery('.iphone h2').each(function(){
+		     var me = $(this);
+		     me.html(me.html().replace(/^(\w+)/, '<span>$1</span>'));
+		});
 	},
 	list: function() {
 		var a = jQuery('#fbsection2');
 		var pos = a.position();
+
+		var b = jQuery('#fbsection3');
+		var pos2 = a.position();
+
+		var c = jQuery('#fbsection4');
+		var pos3 = a.position();
+
 		jQuery(window).scroll(function() {
 			var windowpos = jQuery(window).scrollTop();
 			if (windowpos >= pos.top - 300 ) {
-				a.find("li").each(function(index){
+				jQuery("li", a).each(function(index){
 					jQuery(this).delay(100*index).queue(function(){
 				   		jQuery(this).addClass("in").dequeue();
 				   	});
 				});
 			}
-		});
-		var b = jQuery('#fbsection3');
-		var pos = b.position();
-		jQuery(window).scroll(function() {
-			var windowpos = jQuery(window).scrollTop();
-			if (windowpos >= pos.top - 300 ) {
-				b.find("li").each(function(index){
+			if (windowpos >= pos2.top - 300 ) {
+				jQuery("li", b).each(function(index){
+					jQuery(this).delay(100*index).queue(function(){
+				   		jQuery(this).addClass("in").dequeue();
+				   	});
+				});
+			}
+			if (windowpos >= pos3.top - 300 ) {
+				jQuery("li", c).each(function(index){
 					jQuery(this).delay(100*index).queue(function(){
 				   		jQuery(this).addClass("in").dequeue();
 				   	});
@@ -199,7 +230,7 @@ var init = {
 		jQuery(window).scroll(function() {
 		    var height = jQuery('#fbsection2').offset().top;
 		    var scroll = jQuery(window).scrollTop();
-		    if (scroll >= height) {
+		    if (scroll >= height - 100) {
 		        jQuery(".navigation").addClass('in');
 		    } else {
 		    	jQuery(".navigation").removeClass('in');
@@ -216,9 +247,9 @@ var init = {
 	instafeed: function() {
 		var userFeed = new Instafeed({
             get: 'user',
-            userId: '2278857975',
-            clientId: '1e27e8e0732142e98517bc10f8abf989',
-            accessToken: '1385988408.1e27e8e.13cd0c2c1238429ca9d5cec911d06a09',
+            userId: '2622278571',
+            clientId: 'dd4f961a447e4aba84b74d409eb8363e',
+            accessToken: '2622278571.dd4f961.2b3f7771342d428a808d8a72442c17ff',
             resolution: 'standard_resolution',
             template: '<div><img src="{{image}}" alt="" /></div>',
             limit: 20,

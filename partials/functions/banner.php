@@ -43,11 +43,6 @@ function banner($post) {
         }
     echo '</div>';
 }
-
-add_action( 'save_post', 'save_custom_meta', 10, 3 );
-function save_custom_meta($post_id) {
-    update_post_meta($post_id,'banner',"");
-}
 // ajax response to save download track
 add_action('wp_ajax_setImage', 'setCustomImage');
 add_action('wp_ajax_nopriv_setImage', 'setCustomImage');

@@ -21,7 +21,23 @@ get_header();
 		);
 		query_posts( $args );
 		while ( have_posts() ) : the_post();
+			$banner = get_post_meta($post->ID, 'banner', true);
+			$info = new SplFileInfo($banner);
+		    $fileType = $info->getExtension();
 			echo '<section id="fbsection1">';
+				if(!empty($banner)) {
+					if($fileType === "mp4" || $fileType === "webm" || $fileType === "ogv" || $fileType === "ogg") {
+		                echo '<div class="videoWrap">';
+			                echo '<video muted loop autoplay="false" id="bgvid">';
+			                    echo '<source src="'.$banner.'" type="video/webm">';
+			                    echo '<source src="'.$banner.'" type="video/ogv">';
+			                    echo '<source src="'.$banner.'" type="video/mp4">';
+			                echo '</video>';
+			            echo '</div>';
+			        } else { 
+			        	echo '<div class="image" style="background-image: url('.$banner.');"></div>';
+			       }
+				}
 				echo '<div class="outer"><div class="inner">';
 					echo '<div class="container">';
 						echo '<div class="row">';
@@ -57,7 +73,7 @@ get_header();
 				if(!empty($banner)) {
 					if($fileType === "mp4" || $fileType === "webm" || $fileType === "ogv" || $fileType === "ogg") {
 		                echo '<div class="videoWrap">';
-			                echo '<video muted autoplay id="bgvid" loop>';
+			                echo '<video muted loop autoplay="false" id="bgvid" loop>';
 			                    echo '<source src="'.$banner.'" type="video/webm">';
 			                    echo '<source src="'.$banner.'" type="video/ogv">';
 			                    echo '<source src="'.$banner.'" type="video/mp4">';
@@ -70,7 +86,7 @@ get_header();
 				echo '<div class="outer"><div class="inner">';
 					echo '<div class="container">';
 						echo '<div class="row">';
-							echo '<div class="col-sm-4" data-animation="slideUp">';
+							echo '<div class="col-sm-4 sectionTitle" data-animation="slideUp">';
 								echo '<div class="outer"><div class="inner">';
 									the_title("<h2 data-animation='slideUp'>","</h2>");
 								echo '</div></div>';

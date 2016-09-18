@@ -1,3 +1,15 @@
+@media (max-width: 1200px) {
+	body {
+		font-size: 13px;
+	}
+	.iphone {
+		ul {
+			li {
+				line-height: 14pt;
+			}
+		}
+	}
+}
 @media (max-width: 768px) {
 	.cbp-fbscroller {
 		nav {
@@ -5,25 +17,52 @@
 		}
 	}
 	.logo {
-		width: 200px;
+		width: 150px;
 	}
 	#fbsection1 {
+		.videoWrap {
+			background: url('assets/images/bg.jpg') no-repeat scroll center / cover;
+			video {
+				display: none;
+			}
+		}
 		.copy {
 			text-align: center;
-			margin-top: 50px;
+			margin-top: 25px;
 			h3 {
 				font-size: 24pt;
 			}
-			font-size: 14pt;
+			font-size: 10pt;
 		}
-	}
-	#download {
-		a {
-			display: block;
-			margin-bottom: 25px;
+		#download {
+			a {
+				display: block;
+				box-sizing: border-box;
+				margin-bottom: 15px;
+				svg {
+					min-width: 100%;
+				}
+				&:last-child {
+					margin-left: 0;
+				}
+			}
 		}
 	}
 	#fbsection2, #fbsection3, #fbsection4, #fbsection5, .navigation {
 		display: none;
+	}
+}
+@media (max-width: 414px) {
+	#fbsection1 {
+		.copy {
+			font-size: 13pt;
+		}
+	}
+}
+@media (max-width: 375px ) {
+	#fbsection1 {
+		.copy {
+			font-size: 10pt;
+		}
 	}
 }

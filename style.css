@@ -277,7 +277,7 @@ ul {
     list-style: none;
     margin: 0 auto;
     box-sizing: border-box;
-    width: 800px; }
+    width: 600px; }
     .navigation ul li {
       width: 20%;
       display: inline-block;
@@ -307,14 +307,14 @@ ul {
   .navigation .logo {
     position: absolute;
     top: 5px;
-    left: 25px;
+    left: 5px;
     width: auto; }
     .navigation .logo img {
       height: 45px; }
   .navigation .app {
     position: absolute;
     top: 6px;
-    right: 25px; }
+    right: 5px; }
     .navigation .app a {
       width: 48%;
       display: inline-block; }
@@ -352,8 +352,8 @@ ul {
   overflow: hidden;
   z-index: 1; }
   .videoWrap video {
-    width: 250px;
-    height: 440px;
+    width: 210px;
+    height: auto;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -365,14 +365,23 @@ ul {
 
 #fbsection1 {
   text-align: center;
-  background: url("assets/images/bg.jpg") no-repeat scroll center/cover;
   z-index: 10; }
+  #fbsection1 video {
+    width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
   #fbsection1 .outer {
     background: linear-gradient(rgba(0, 0, 0, 0.5), black); }
   #fbsection1 .copy {
     color: white;
     text-align: left;
-    font-size: 14pt; }
+    font-size: 12pt;
+    margin: 10px 0; }
+    #fbsection1 .copy p {
+      margin: 0; }
     #fbsection1 .copy h3 {
       font-size: 36pt;
       text-transform: uppercase; }
@@ -437,11 +446,11 @@ ul {
     right: 0;
     bottom: 0;
     line-height: 0;
-    -webkit-column-count: 4;
+    -webkit-column-count: 5;
     -webkit-column-gap: 0;
-    -moz-column-count: 4;
+    -moz-column-count: 5;
     -moz-column-gap: 0;
-    column-count: 4;
+    column-count: 5;
     column-gap: 0;
     z-index: 1; }
     #fbsection5 #instafeed img {
@@ -634,6 +643,10 @@ html, body,
       border: 1px solid black;
       border-top: none;
       box-sizing: border-box;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
       -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       -moz-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
@@ -711,6 +724,8 @@ html, body,
 
 .iphone ul li {
   opacity: 0;
+  line-height: 14pt;
+  margin-bottom: 5px;
   -webkit-transform: translate(0, 100px);
   -moz-transform: translate(0, 100px);
   -ms-transform: translate(0, 100px);
@@ -729,24 +744,53 @@ html, body,
     -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     -moz-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+.iphone .sectionTitle {
+  text-align: right; }
+.iphone h2 {
+  display: inline-block;
+  text-align: left; }
+  .iphone h2 span {
+    display: block;
+    font-size: 16pt;
+    text-align: left; }
 
+@media (max-width: 1200px) {
+  body {
+    font-size: 13px; }
+
+  .iphone ul li {
+    line-height: 14pt; } }
 @media (max-width: 768px) {
   .cbp-fbscroller nav {
     display: none; }
 
   .logo {
-    width: 200px; }
+    width: 150px; }
 
+  #fbsection1 .videoWrap {
+    background: url("assets/images/bg.jpg") no-repeat scroll center/cover; }
+    #fbsection1 .videoWrap video {
+      display: none; }
   #fbsection1 .copy {
     text-align: center;
-    margin-top: 50px;
-    font-size: 14pt; }
+    margin-top: 25px;
+    font-size: 10pt; }
     #fbsection1 .copy h3 {
       font-size: 24pt; }
-
-  #download a {
+  #fbsection1 #download a {
     display: block;
-    margin-bottom: 25px; }
+    box-sizing: border-box;
+    margin-bottom: 15px; }
+    #fbsection1 #download a svg {
+      min-width: 100%; }
+    #fbsection1 #download a:last-child {
+      margin-left: 0; }
 
   #fbsection2, #fbsection3, #fbsection4, #fbsection5, .navigation {
     display: none; } }
+@media (max-width: 414px) {
+  #fbsection1 .copy {
+    font-size: 13pt; } }
+@media (max-width: 375px) {
+  #fbsection1 .copy {
+    font-size: 10pt; } }

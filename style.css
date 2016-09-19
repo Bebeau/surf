@@ -367,7 +367,9 @@ ul {
   text-align: center;
   z-index: 10; }
   #fbsection1 video {
-    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -384,13 +386,16 @@ ul {
       margin: 0; }
     #fbsection1 .copy h3 {
       font-size: 36pt;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      margin-top: 0; }
   #fbsection1 #download {
     margin-top: 25px; }
     #fbsection1 #download a {
       display: inline-block; }
       #fbsection1 #download a:last-child {
         margin-left: 15px; }
+      #fbsection1 #download a svg {
+        max-width: 100%; }
   #fbsection1 .col-sm-4 {
     height: auto; }
   #fbsection1 svg {

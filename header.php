@@ -105,12 +105,12 @@
 			<li><a href="#fbsection5">Contact</a></li>
 		</ul>
 		<div class="app">
-			<a href="https://itunes.apple.com/us/app/surf-live/id1139012413?mt=8" target="_BLANK">
+			<div class="link" data-href="https://itunes.apple.com/us/app/surf-live/id1139012413?mt=8">
 				<img class="svg" src="<?php echo bloginfo('template_directory');?>/assets/images/apple_large.svg" alt="Surf">
-			</a>
-			<a href="https://play.google.com/store/apps/details?id=com.surfliveinc.surf&hl=en" target="_BLANK">
+			</div>
+			<div class="link" data-href="https://play.google.com/store/apps/details?id=com.surfliveinc.surf&amp;hl=en">
 				<img class="svg" src="<?php echo bloginfo('template_directory');?>/assets/images/android_large.svg" alt="Surf">
-			</a>
+			</div>
 		</div>
 	</nav>
 </header>

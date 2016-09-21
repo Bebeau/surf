@@ -12,7 +12,7 @@ if (!function_exists( 'load_custom_scripts' ) ) {
 
 		// Load default Wordpress jQuery
 		wp_deregister_script('jquery');
-		wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"), false, '', false);
+		wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"), false, '', false);
 		wp_enqueue_script('jquery');
 
         wp_enqueue_script( 'modernizer', get_bloginfo( 'template_url' ) . '/assets/js/scroll/modernizr.custom.js', array( 'jquery' ), null, true );

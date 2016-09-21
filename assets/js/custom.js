@@ -114,6 +114,15 @@ var init = {
 		init.dropdown();
 		init.SVG();
 		init.headerWrap();
+		init.linking();
+	},
+	linking: function() {
+		jQuery('.app div').click(function(e){
+			e.preventDefault();
+			var link = jQuery(this).attr("data-href");
+			// jQuery(window).attr('location',link);
+			window.open(link, '_blank').focus();
+		});
 	},
 	headerWrap: function() {
 		jQuery('.iphone h2').each(function(){

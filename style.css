@@ -318,17 +318,19 @@ ul {
     position: absolute;
     top: 6px;
     right: 5px; }
-    .navigation .app a {
+    .navigation .app .link {
       width: 48%;
       display: inline-block; }
-      .navigation .app a:first-child {
+      .navigation .app .link:first-child {
         margin-right: 5px; }
-      .navigation .app a:last-child {
+      .navigation .app .link:last-child {
         float: right; }
-      .navigation .app a svg g, .navigation .app a svg path, .navigation .app a svg text, .navigation .app a svg tspan {
+      .navigation .app .link svg g, .navigation .app .link svg path, .navigation .app .link svg text, .navigation .app .link svg tspan {
         fill: white; }
-      .navigation .app a svg use {
+      .navigation .app .link svg use {
         stroke: white; }
+      .navigation .app .link:hover {
+        cursor: pointer; }
 
 .logo {
   width: 350px;
@@ -730,17 +732,25 @@ html, body,
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%; }
-    .socialWrap a.facebook:hover {
-      background: #4c70ba; }
-    .socialWrap a.twitter:hover {
-      background: #21c2ff; }
-    .socialWrap a.instagram:hover {
-      background: #1872b5; }
-    .socialWrap a.pinterest:hover {
-      background: #df3f45; }
-    .socialWrap a.youtube:hover {
-      background: #ee0000; }
+    border-bottom-right-radius: 50%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .socialWrap a i {
+      color: white;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    .socialWrap a:hover {
+      border: 2px solid #ed1b24;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+      .socialWrap a:hover i {
+        color: #ed1b24;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
 
 .iphone ul li {
   line-height: 14pt;

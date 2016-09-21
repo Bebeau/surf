@@ -142,7 +142,7 @@ ul {
 		position: absolute;
 		top: 6px;
 		right: 5px;
-		a {
+		.link {
 			width: 48%;
 			display: inline-block;
 			&:first-child {
@@ -158,6 +158,9 @@ ul {
 				use {
 					stroke: white;
 				}
+			}
+			&:hover {
+				cursor: pointer;
 			}
 		}
 	}
@@ -576,29 +579,17 @@ html, body,
 		border: 2px solid white;
 		@include border-top-radius(50%);
 		@include border-bottom-radius(50%);
-		&.facebook {
-			&:hover {
-				background: lighten($facebook, 10%);
-			}
+		@include transition(all 0.3s ease-in-out);
+		i {
+			color: white;
+			@include transition(all 0.3s ease-in-out);
 		}
-		&.twitter {
-			&:hover {
-				background: lighten($twitter, 10%);
-			}
-		}
-		&.instagram {
-			&:hover {
-				background: lighten($instagram, 10%);
-			}
-		}
-		&.pinterest {
-			&:hover {
-				background: lighten($pinterest, 10%);
-			}
-		}
-		&.youtube {
-			&:hover {
-				background: lighten($youtube, 10%);
+		&:hover {
+			border: 2px solid $red;
+			@include transition(all 0.3s ease-in-out);
+			i {
+				color: $red;
+				@include transition(all 0.3s ease-in-out);
 			}
 		}
 	}

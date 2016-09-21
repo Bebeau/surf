@@ -76,10 +76,10 @@
 			margin-bottom: 15px;
 		}
 		.videoWrap {
-			position: relative;
 			background: url('assets/images/phone.svg') no-repeat fixed center / contain white;
 			background-size: auto 450px;
 			height: 500px;
+			z-index: 1;
 			video {
 				width: 185px;
 			}
@@ -87,11 +87,14 @@
 		.content {
 			box-sizing: border-box;
 			padding: 25px;
+			position: relative;
+			z-index: 100;
+			padding-top: 525px;
 			ul {
 				margin-left: 20px;
 			}
 		}
-		&.phone-2 {
+		&.phone-5 {
 			background: black;
 			color: white;
 			.videoWrap {
@@ -100,10 +103,10 @@
 				height: 500px;
 			}
 		}
-		&.phone-3 {
+		&.phone-6 {
 			background: white;
 		}
-		&.phone-4 {
+		&.phone-7 {
 			background: $red;
 			color: white;
 			.videoWrap {

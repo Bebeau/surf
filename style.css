@@ -783,9 +783,13 @@ html, body,
       display: none; }
     .navigation .logo {
       width: 50px; }
-    .navigation .app a svg {
-      height: 41px;
+    .navigation .app a {
       width: auto; }
+      .navigation .app a:last-child {
+        float: none; }
+      .navigation .app a svg {
+        height: 41px;
+        width: auto; }
 
   #fbsection1 {
     height: 100vh; }

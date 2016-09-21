@@ -101,29 +101,35 @@ get_header();
 					echo '</div>';
 				echo '</div>';
 			echo '</section>';
-
-			echo '<section class="iphone mobile phone-'.$c.'">';
-				if(!empty($banner)) {
-					if($fileType === "mp4" || $fileType === "webm" || $fileType === "ogv" || $fileType === "ogg") {
-		                echo '<div class="videoWrap">';
-			                echo '<video muted loop autoplay="false" id="bgvid" loop>';
-			                    echo '<source src="'.$banner.'" type="video/webm">';
-			                    echo '<source src="'.$banner.'" type="video/ogv">';
-			                    echo '<source src="'.$banner.'" type="video/mp4">';
-			                echo '</video>';
-			            echo '</div>';
-			        } else { 
-			        	echo '<div class="image" style="background-image: url('.$banner.');"></div>';
-			       }
-				}
-				echo '<div class="content">';
-					the_title("<h2>","</h2>");
-					the_content();
-				echo '</div>';
-			echo '</section>';
-
 			$c++;
 		endwhile;
+		if(wp_is_mobile()) {
+			while ( have_posts() ) : the_post();
+				$banner = get_post_meta($post->ID, 'banner', true);
+				$info = new SplFileInfo($banner);
+			    $fileType = $info->getExtension();
+				echo '<section class="iphone mobile phone-'.$c.'">';
+					if(!empty($banner)) {
+						if($fileType === "mp4" || $fileType === "webm" || $fileType === "ogv" || $fileType === "ogg") {
+			                echo '<div class="videoWrap">';
+				                echo '<video muted loop autoplay="false" id="bgvid" loop>';
+				                    echo '<source src="'.$banner.'" type="video/webm">';
+				                    echo '<source src="'.$banner.'" type="video/ogv">';
+				                    echo '<source src="'.$banner.'" type="video/mp4">';
+				                echo '</video>';
+				            echo '</div>';
+				        } else { 
+				        	echo '<div class="image" style="background-image: url('.$banner.');"></div>';
+				       }
+					}
+					echo '<div class="content">';
+						the_title("<h2>","</h2>");
+						the_content();
+					echo '</div>';
+				echo '</section>';
+			$c++;
+			endwhile;
+		}
 		wp_reset_query();
 
 		echo '<section id="fbsection5">';

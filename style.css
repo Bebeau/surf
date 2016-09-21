@@ -825,7 +825,7 @@ html, body,
     height: auto; }
     .iphone h2 {
       margin-bottom: 15px; }
-    .iphone .videoWrap img {
+    .iphone .videoWrap .phone {
       width: 210px;
       height: auto;
       position: fixed;
@@ -836,8 +836,17 @@ html, body,
       -ms-transform: translate(-50%, -50%);
       -o-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
-    .iphone .videoWrap video {
-      width: 185px; }
+    .iphone .videoWrap .video {
+      width: 185px;
+      height: auto;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-49%, -50%);
+      -moz-transform: translate(-49%, -50%);
+      -ms-transform: translate(-49%, -50%);
+      -o-transform: translate(-49%, -50%);
+      transform: translate(-49%, -50%); }
     .iphone .content {
       box-sizing: border-box;
       position: relative;

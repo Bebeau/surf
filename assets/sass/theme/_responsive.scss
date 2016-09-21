@@ -76,20 +76,27 @@
 			margin-bottom: 15px;
 		}
 		.videoWrap {
-			background: url('assets/images/phone.svg') no-repeat fixed top center / contain white;
-			background-size: auto 450px;
-			height: 500px;
-			z-index: 1;
+			img {
+				width: 210px;
+				height: auto;
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				@include transform(translate(-50%,-50%));
+			}
 			video {
 				width: 185px;
 			}
 		}
 		.content {
 			box-sizing: border-box;
-			padding: 25px;
 			position: relative;
 			z-index: 100;
 			padding-top: 525px;
+			article {
+				box-sizing: border-box;
+				padding: 25px;
+			}
 			ul {
 				margin-left: 20px;
 			}
@@ -97,22 +104,27 @@
 		&.phone-5 {
 			background: black;
 			color: white;
-			.videoWrap {
-				background: url('assets/images/phone_white.svg') no-repeat fixed top center / contain black;
-				background-size: auto 450px;
-				height: 500px;
+			.content {
+				article {
+					background: black;
+				}
 			}
 		}
 		&.phone-6 {
 			background: white;
+			.content {
+				article {
+					background: white;
+				}
+			}
 		}
 		&.phone-7 {
 			background: $red;
 			color: white;
-			.videoWrap {
-				background: url('assets/images/phone_white.svg') no-repeat fixed top center / contain $red;
-				background-size: auto 450px;
-				height: 500px;
+			.content {
+				article {
+					background: $red;
+				}
 			}
 		}
 	}

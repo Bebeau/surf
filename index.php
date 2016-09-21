@@ -112,6 +112,11 @@ get_header();
 					if(!empty($banner)) {
 						if($fileType === "mp4" || $fileType === "webm" || $fileType === "ogv" || $fileType === "ogg") {
 			                echo '<div class="videoWrap">';
+			                	if($c === 5 || $c === 7) {
+			                		echo '<img src="'.get_bloginfo('template_directory').'/assets/images/phone_white.svg" alt="" />';
+			                	} elseif($c === 6) {
+			                		echo '<img src="'.get_bloginfo('template_directory').'/assets/images/phone.svg" alt="" />';
+			                	}
 				                echo '<video muted loop autoplay="false" id="bgvid" loop>';
 				                    echo '<source src="'.$banner.'" type="video/webm">';
 				                    echo '<source src="'.$banner.'" type="video/ogv">';
@@ -123,8 +128,10 @@ get_header();
 				       }
 					}
 					echo '<div class="content">';
-						the_title("<h2>","</h2>");
-						the_content();
+						echo '<article>';
+							the_title("<h2>","</h2>");
+							the_content();
+						echo '</article>';
 					echo '</div>';
 				echo '</section>';
 			$c++;

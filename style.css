@@ -810,37 +810,43 @@ html, body,
     height: auto; }
     .iphone h2 {
       margin-bottom: 15px; }
-    .iphone .videoWrap {
-      background: url("assets/images/phone.svg") no-repeat fixed top center/contain white;
-      background-size: auto 450px;
-      height: 500px;
-      z-index: 1; }
-      .iphone .videoWrap video {
-        width: 185px; }
+    .iphone .videoWrap img {
+      width: 210px;
+      height: auto;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    .iphone .videoWrap video {
+      width: 185px; }
     .iphone .content {
       box-sizing: border-box;
-      padding: 25px;
       position: relative;
       z-index: 100;
       padding-top: 525px; }
+      .iphone .content article {
+        box-sizing: border-box;
+        padding: 25px; }
       .iphone .content ul {
         margin-left: 20px; }
     .iphone.phone-5 {
       background: black;
       color: white; }
-      .iphone.phone-5 .videoWrap {
-        background: url("assets/images/phone_white.svg") no-repeat fixed top center/contain black;
-        background-size: auto 450px;
-        height: 500px; }
+      .iphone.phone-5 .content article {
+        background: black; }
     .iphone.phone-6 {
       background: white; }
+      .iphone.phone-6 .content article {
+        background: white; }
     .iphone.phone-7 {
       background: #ed1b24;
       color: white; }
-      .iphone.phone-7 .videoWrap {
-        background: url("assets/images/phone_white.svg") no-repeat fixed top center/contain #ed1b24;
-        background-size: auto 450px;
-        height: 500px; }
+      .iphone.phone-7 .content article {
+        background: #ed1b24; }
 
   .cbp-fbscroller section {
     height: auto; }

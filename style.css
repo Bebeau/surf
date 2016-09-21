@@ -811,7 +811,7 @@ html, body,
     .iphone h2 {
       margin-bottom: 15px; }
     .iphone .videoWrap {
-      background: url("assets/images/phone.svg") no-repeat fixed center/contain white;
+      background: url("assets/images/phone.svg") no-repeat fixed top center/contain white;
       background-size: auto 450px;
       height: 500px;
       z-index: 1; }
@@ -829,7 +829,7 @@ html, body,
       background: black;
       color: white; }
       .iphone.phone-5 .videoWrap {
-        background: url("assets/images/phone_white.svg") no-repeat fixed center/contain black;
+        background: url("assets/images/phone_white.svg") no-repeat fixed top center/contain black;
         background-size: auto 450px;
         height: 500px; }
     .iphone.phone-6 {
@@ -838,7 +838,7 @@ html, body,
       background: #ed1b24;
       color: white; }
       .iphone.phone-7 .videoWrap {
-        background: url("assets/images/phone_white.svg") no-repeat fixed center/contain #ed1b24;
+        background: url("assets/images/phone_white.svg") no-repeat fixed top center/contain #ed1b24;
         background-size: auto 450px;
         height: 500px; }
 

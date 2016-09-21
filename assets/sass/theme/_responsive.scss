@@ -76,7 +76,7 @@
 			margin-bottom: 15px;
 		}
 		.videoWrap {
-			background: url('assets/images/phone.svg') no-repeat fixed center / contain white;
+			background: url('assets/images/phone.svg') no-repeat fixed top center / contain white;
 			background-size: auto 450px;
 			height: 500px;
 			z-index: 1;
@@ -98,7 +98,7 @@
 			background: black;
 			color: white;
 			.videoWrap {
-				background: url('assets/images/phone_white.svg') no-repeat fixed center / contain black;
+				background: url('assets/images/phone_white.svg') no-repeat fixed top center / contain black;
 				background-size: auto 450px;
 				height: 500px;
 			}
@@ -110,7 +110,7 @@
 			background: $red;
 			color: white;
 			.videoWrap {
-				background: url('assets/images/phone_white.svg') no-repeat fixed center / contain $red;
+				background: url('assets/images/phone_white.svg') no-repeat fixed top center / contain $red;
 				background-size: auto 450px;
 				height: 500px;
 			}

@@ -36,9 +36,13 @@
 		}
 		.app {
 			a {
+				width: auto;
+				&:last-child {
+					float: none;
+				}
 				svg {
 					height: 41px;
-					width: auto;
+					width: 121px;
 				}
 			}
 		}

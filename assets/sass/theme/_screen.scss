@@ -80,6 +80,9 @@ ul {
 		line-height: 24px;
 	}
 }
+.mobile {
+	display: none !important;
+}
 .navigation {
 	background: black;
 	position: fixed;
@@ -207,8 +210,12 @@ ul {
 	.copy {
 		color: white;
 		text-align: left;
-		font-size: 12pt;
+		font-size: 18pt;
 		margin: 10px 0;
+		height: 270px;
+		.outer {
+			background: none;
+		}
 		p {
 			margin: 0;
 		}
@@ -297,74 +304,21 @@ ul {
 		column-count: 5;
 		column-gap: 0;
 		z-index: 1;
-		img {
-			max-width: 100%;
-			height: auto;
-		}
-	}
-}
-.col-sm-4 {
-	height: 600px;
-}
-
-html, body, 
-.container,
-.cbp-fbscroller,
-.cbp-fbscroller section { 
-	height: 100%; 
-}
-
-.cbp-fbscroller {
-	nav {
-		position: fixed;
-		z-index: 9999;
-		right: 15px;
-		top: 50%;
-		width: 26px;
-		@include transform(translateY(-50%));
-		a {
-			display: block;
-			position: relative;
-			z-index: 9999;
-			color: transparent;
-			width: 15px;
-			height: 15px;
-			outline: none;
-			margin: 25px 0;
-			border-radius: 50%;
-			border: 1px solid darken(white, 10%);
-			@include transition(transform 0.3s $authenticMotion);
-			&:hover {
-				background: rgba(255,255,255,0.6);
-				@include transition(transform 0.3s $authenticMotion);
-			}
-			&.cbp-fbcurrent {
-				background: darken(white, 10%);
-				@include transition(transform 0.3s $authenticMotion);
+		div {
+			overflow: hidden;
+			img {
+				max-width: 100%;
+				height: auto;
+				margin-top: -2px;
+				margin-bottom: -2px;
 			}
 		}
 	}
-}
-
-.cbp-fbscroller section {
-	position: relative;
-	background-position: top center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.no-touch .cbp-fbscroller section {
-	background-attachment: fixed;
-}
-
-#fbsection6 {
-	position: relative;
-	z-index: 10;
-	background: black;
 	#contactfrm {
 		box-sizing: border-box;
 		padding: 0 25px;
-		margin-top: 25px;
+		width: 800px;
+		margin: 100px auto 0;
 		&:after {
 			content: "";
 			clear: both;
@@ -519,6 +473,68 @@ html, body,
 			}
 		}
 	}
+	#legal {
+		position: absolute;
+		text-align: center;
+		bottom: 25px;
+		width: 100%;
+		color: #666;
+		z-index: 999;
+		letter-spacing: 1px;
+	}
+}
+.col-sm-4 {
+	height: 600px;
+}
+
+html, body, 
+.container,
+.cbp-fbscroller,
+.cbp-fbscroller section { 
+	height: 100%; 
+}
+
+.cbp-fbscroller {
+	nav {
+		position: fixed;
+		z-index: 9999;
+		right: 15px;
+		top: 50%;
+		width: 26px;
+		@include transform(translateY(-50%));
+		a {
+			display: block;
+			position: relative;
+			z-index: 9999;
+			color: transparent;
+			width: 15px;
+			height: 15px;
+			outline: none;
+			margin: 25px 0;
+			border-radius: 50%;
+			border: 1px solid darken(white, 10%);
+			@include transition(transform 0.3s $authenticMotion);
+			&:hover {
+				background: rgba(255,255,255,0.6);
+				@include transition(transform 0.3s $authenticMotion);
+			}
+			&.cbp-fbcurrent {
+				background: darken(white, 10%);
+				@include transition(transform 0.3s $authenticMotion);
+			}
+		}
+	}
+}
+
+.cbp-fbscroller section {
+	position: relative;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.no-touch .cbp-fbscroller section {
+	background-attachment: fixed;
 }
 .btn {
 	background: transparent;
@@ -551,7 +567,7 @@ html, body,
 	a {
 		width: 40px;
 		height: 40px;
-		line-height: 28px;
+		line-height: 33px;
 		display: inline-block;
 		font-size: 16pt;
 		margin: 0 5px;
@@ -589,16 +605,9 @@ html, body,
 .iphone {
 	ul {
 		li {
-			opacity: 0;
 			line-height: 14pt;
 			margin-bottom: 5px;
-			@include transform(translate(0,100px));
 			@include transition(all 0.2s $authenticMotion);
-			&.in {
-				opacity: 1;
-				@include transform(translate(0,0));
-				@include transition(all 0.2s $authenticMotion);
-			}
 		}
 	}
 	.sectionTitle {

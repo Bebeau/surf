@@ -113,63 +113,12 @@ var init = {
 		init.scrollNav();
 		init.dropdown();
 		init.SVG();
-		init.list();
 		init.headerWrap();
-		init.playVideo();
-	},
-	playVideo: function() {
-		var vid = jQuery('.iphone video');
-		playing = false;
-		vid.each(function(){
-			jQuery(window).scroll(function() {
-				var vidpos = vid.position();
-				var windowpos = jQuery(window).scrollTop();
-				if (windowpos >= vidpos.top - 300 ) {
-					vid[0].play();
-		    		playing1 = true;
-				}
-			});
-		});
 	},
 	headerWrap: function() {
 		jQuery('.iphone h2').each(function(){
 		     var me = $(this);
 		     me.html(me.html().replace(/^(\w+)/, '<span>$1</span>'));
-		});
-	},
-	list: function() {
-		var a = jQuery('#fbsection2');
-		var pos = a.position();
-
-		var b = jQuery('#fbsection3');
-		var pos2 = a.position();
-
-		var c = jQuery('#fbsection4');
-		var pos3 = a.position();
-
-		jQuery(window).scroll(function() {
-			var windowpos = jQuery(window).scrollTop();
-			if (windowpos >= pos.top - 300 ) {
-				jQuery("li", a).each(function(index){
-					jQuery(this).delay(100*index).queue(function(){
-				   		jQuery(this).addClass("in").dequeue();
-				   	});
-				});
-			}
-			if (windowpos >= pos2.top - 300 ) {
-				jQuery("li", b).each(function(index){
-					jQuery(this).delay(100*index).queue(function(){
-				   		jQuery(this).addClass("in").dequeue();
-				   	});
-				});
-			}
-			if (windowpos >= pos3.top - 300 ) {
-				jQuery("li", c).each(function(index){
-					jQuery(this).delay(100*index).queue(function(){
-				   		jQuery(this).addClass("in").dequeue();
-				   	});
-				});
-			}
 		});
 	},
 	SVG: function() {

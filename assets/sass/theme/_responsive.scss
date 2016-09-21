@@ -11,6 +11,12 @@
 	}
 }
 @media (max-width: 768px) {
+	.no-mobile {
+		display: none !important;
+	}
+	.mobile {
+		display: block !important;
+	}
 	.cbp-fbscroller {
 		nav {
 			display: none;
@@ -19,7 +25,26 @@
 	.logo {
 		width: 150px;
 	}
+	.navigation {
+		height: 55px;
+		background: black;
+		ul {
+			display: none;
+		}
+		.logo {
+			width: 50px;
+		}
+		.app {
+			a {
+				svg {
+					height: 41px;
+					width: auto;
+				}
+			}
+		}
+	}
 	#fbsection1 {
+		height: 100vh;
 		.videoWrap {
 			background: url('assets/images/bg.jpg') no-repeat scroll center / cover;
 			video {
@@ -28,7 +53,7 @@
 		}
 		.copy {
 			text-align: center;
-			margin-top: 25px;
+			margin: 0;
 			h3 {
 				font-size: 24pt;
 			}
@@ -39,17 +64,108 @@
 				display: block;
 				box-sizing: border-box;
 				margin-bottom: 15px;
-				svg {
-					min-width: 100%;
-				}
 				&:last-child {
 					margin-left: 0;
 				}
 			}
 		}
 	}
-	#fbsection2, #fbsection3, #fbsection4, #fbsection5, .navigation {
-		display: none;
+	.iphone {
+		height: auto;
+		h2 {
+			margin-bottom: 15px;
+		}
+		.videoWrap {
+			position: relative;
+			background: url('assets/images/phone.svg') no-repeat fixed center / contain white;
+			background-size: auto 450px;
+			height: 500px;
+			video {
+				width: 185px;
+			}
+		}
+		.content {
+			box-sizing: border-box;
+			padding: 25px;
+			ul {
+				margin-left: 20px;
+			}
+		}
+		&.phone-2 {
+			background: black;
+			color: white;
+			.videoWrap {
+				background: url('assets/images/phone_white.svg') no-repeat fixed center / contain black;
+				background-size: auto 450px;
+				height: 500px;
+			}
+		}
+		&.phone-3 {
+			background: white;
+		}
+		&.phone-4 {
+			background: $red;
+			color: white;
+			.videoWrap {
+				background: url('assets/images/phone_white.svg') no-repeat fixed center / contain $red;
+				background-size: auto 450px;
+				height: 500px;
+			}
+		}
+	}
+	.cbp-fbscroller {
+		section {
+			height: auto;
+		}
+	}
+	#fbsection5 {
+		height: auto;
+		padding-top: 50px;
+		h2 {
+			font-size: 18pt;
+		}
+		.half {
+			width: 100%;
+			input {
+				width: 100%;
+			}
+		}
+		#dropdown {
+			width: 100%;
+			margin-bottom: 25px;
+		}
+		#contactfrm {
+			margin-top: 0;
+			width: 100%;
+		}
+		.socialWrap {
+			margin-top: 15px;
+			a {
+				line-height: 28px;
+			}
+		}
+		#instafeed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			line-height: 0;
+			-webkit-column-count: 3;
+			-webkit-column-gap: 0;
+			-moz-column-count: 3;
+			-moz-column-gap: 0;
+			column-count: 3;
+			column-gap: 0;
+			z-index: 1;
+		}
+		#legal {
+			position: relative;
+			margin: 25px 0;
+		}
+		.btn-submit {
+			width: 100%;
+		}
 	}
 }
 @media (max-width: 414px) {

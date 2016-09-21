@@ -12,7 +12,6 @@ get_header();
 			echo '<a href="#fbsection3"></a>';
 			echo '<a href="#fbsection4"></a>';
 			echo '<a href="#fbsection5"></a>';
-			echo '<a href="#fbsection6"></a>';
 		echo '</nav>';
 
 		$args = array(
@@ -40,16 +39,18 @@ get_header();
 				}
 				echo '<div class="outer"><div class="inner">';
 					echo '<div class="container">';
-						echo '<div class="row">';
+						echo '<div class="row" data-animation="slideUp">';
 							echo '<div class="col-lg-5 col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-5">';
 								echo '<img class="logo" src="'.get_bloginfo('template_directory').'/assets/images/logo.svg" alt="Surf">';
 							echo '</div>';
-							echo '<div class="col-lg-4 col-md-5 col-sm-7 copy">';
-								the_content();
-								echo '<div id="download">';
-									echo '<a href="https://itunes.apple.com/us/app/surf-live/id1139012413?mt=8" target="_BLANK"><img class="svg" src="'.get_bloginfo('template_directory').'/assets/images/apple_large.svg" alt="Surf"></a>';
-									echo '<a href="https://play.google.com/store/apps/details?id=com.surfliveinc.surf&hl=en" target="_BLANK"><img class="svg" src="'.get_bloginfo('template_directory').'/assets/images/android_large.svg" alt="Surf"></a>';
-								echo '</div>';
+							echo '<div class="col-lg-6 col-md-7 col-sm-7 copy">';
+								echo '<div class="outer"><div class="inner">';
+									the_content();
+									echo '<div id="download">';
+										echo '<a href="https://itunes.apple.com/us/app/surf-live/id1139012413?mt=8" target="_BLANK"><img class="svg" src="'.get_bloginfo('template_directory').'/assets/images/apple_large.svg" alt="Surf"></a>';
+										echo '<a href="https://play.google.com/store/apps/details?id=com.surfliveinc.surf&hl=en" target="_BLANK"><img class="svg" src="'.get_bloginfo('template_directory').'/assets/images/android_large.svg" alt="Surf"></a>';
+									echo '</div>';
+								echo '</div></div>';
 							echo '</div>';
 						echo '</div>';
 					echo '</div>';
@@ -69,7 +70,7 @@ get_header();
 			$banner = get_post_meta($post->ID, 'banner', true);
 			$info = new SplFileInfo($banner);
 		    $fileType = $info->getExtension();
-			echo '<section id="fbsection'.$c.'" class="iphone">';
+			echo '<section id="fbsection'.$c.'" class="iphone no-mobile">';
 				if(!empty($banner)) {
 					if($fileType === "mp4" || $fileType === "webm" || $fileType === "ogv" || $fileType === "ogg") {
 		                echo '<div class="videoWrap">';
@@ -85,10 +86,10 @@ get_header();
 				}
 				echo '<div class="outer"><div class="inner">';
 					echo '<div class="container">';
-						echo '<div class="row">';
-							echo '<div class="col-sm-4 sectionTitle" data-animation="slideUp">';
+						echo '<div class="row" data-animation="slideUp">';
+							echo '<div class="col-sm-4 sectionTitle">';
 								echo '<div class="outer"><div class="inner">';
-									the_title("<h2 data-animation='slideUp'>","</h2>");
+									the_title("<h2>","</h2>");
 								echo '</div></div>';
 							echo '</div>';
 							echo '<div class="col-sm-4 col-sm-offset-4">';
@@ -100,12 +101,33 @@ get_header();
 					echo '</div>';
 				echo '</div>';
 			echo '</section>';
+
+			echo '<section class="iphone mobile phone-'.$c.'">';
+				if(!empty($banner)) {
+					if($fileType === "mp4" || $fileType === "webm" || $fileType === "ogv" || $fileType === "ogg") {
+		                echo '<div class="videoWrap">';
+			                echo '<video muted loop autoplay="false" id="bgvid" loop>';
+			                    echo '<source src="'.$banner.'" type="video/webm">';
+			                    echo '<source src="'.$banner.'" type="video/ogv">';
+			                    echo '<source src="'.$banner.'" type="video/mp4">';
+			                echo '</video>';
+			            echo '</div>';
+			        } else { 
+			        	echo '<div class="image" style="background-image: url('.$banner.');"></div>';
+			       }
+				}
+				echo '<div class="content">';
+					the_title("<h2>","</h2>");
+					the_content();
+				echo '</div>';
+			echo '</section>';
+
 			$c++;
 		endwhile;
 		wp_reset_query();
 
 		echo '<section id="fbsection5">';
-			echo '<div class="outer"><div class="inner">';
+			echo '<div class="outer"><div class="inner" data-animation="slideUp">';
 				echo '<h2>Get Connected</h2>';
 				if( get_option('facebook') || get_option('twitter') || get_option('instagram') || get_option('pinterest') || get_option('youtube') ) { ?>
 					<div class="socialWrap">
@@ -136,20 +158,10 @@ get_header();
 						<?php } ?>
 					</div>
 				<?php }
+				get_contactForm();
 			echo '</div></div>';
 			echo '<div id="instafeed"></div>';
-		echo '</section>';
-
-		echo '<section id="fbsection6">';
-			echo '<div class="container">';
-				echo '<div class="outer"><div class="inner">';
-					echo '<div class="row">';
-						echo '<div class="col-sm-8 col-sm-offset-2">';
-							get_contactForm();
-						echo '</div>';
-					echo '</div>';
-				echo '</div></div>';
-			echo '</div>';
+			echo '<p id="legal">&copy; '.date("Y").' Copyright Surf Live, Inc.</p>';
 		echo '</section>';
 
 	echo '</div>'; ?>

@@ -291,23 +291,24 @@ ul {
 		z-index: 2;
 	}
 	#instafeed {
+		background: black;
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
 		line-height: 0;
-		-webkit-column-count: 5;
+		-webkit-column-count: 6;
 		-webkit-column-gap: 0;
-		-moz-column-count: 5;
+		-moz-column-count: 6;
 		-moz-column-gap: 0;
-		column-count: 5;
+		column-count: 6;
 		column-gap: 0;
 		z-index: 1;
 		div {
 			overflow: hidden;
 			img {
-				max-width: 100%;
+				min-width: 100%;
 				height: auto;
 				margin-top: -2px;
 				margin-bottom: -2px;
@@ -318,7 +319,7 @@ ul {
 		box-sizing: border-box;
 		padding: 0 25px;
 		width: 800px;
-		margin: 100px auto 0;
+		margin: 50px auto 0;
 		&:after {
 			content: "";
 			clear: both;
@@ -361,7 +362,7 @@ ul {
 		background: transparent;
 		border: 1px solid white;
 		padding: 10px;
-		margin-top: 35px;
+		margin-top: 55px;
 		color: white;
 		@include transition(all 0.5s $easeInOutBack);
 		@include border-top-radius(0);

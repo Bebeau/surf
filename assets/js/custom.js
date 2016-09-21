@@ -201,7 +201,7 @@ var init = {
             accessToken: '2622278571.dd4f961.2b3f7771342d428a808d8a72442c17ff',
             resolution: 'standard_resolution',
             template: '<div><img src="{{image}}" alt="" /></div>',
-            limit: 20,
+            limit: 60,
             sortBy: 'most-recent'
         });
         userFeed.run();

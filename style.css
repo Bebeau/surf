@@ -781,6 +781,10 @@ html, body,
     #fbsection1 .copy p {
       font-size: 16pt; }
 
+  #fbsection5 {
+    height: auto;
+    padding-top: 100px; }
+
   .navigation .app {
     top: 12px; }
     .navigation .app .link svg {

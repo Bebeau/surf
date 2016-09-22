@@ -174,7 +174,7 @@ get_header();
 				get_contactForm();
 			echo '</div></div>';
 			echo '<div id="instafeed"></div>';
-			echo '<p id="legal">&copy; '.date("Y").' Copyright Surf Live, Inc.</p>';
+			echo '<p id="legal">&copy; '.date("Y").' Surf Live, Inc.</p>';
 		echo '</section>';
 
 	echo '</div>'; ?>

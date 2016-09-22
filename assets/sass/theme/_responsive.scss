@@ -12,7 +12,11 @@
 }
 @media (max-width: 1024px) {
 	#fbsection1 {
+		.logo {
+			margin-top: 15px;
+		}
 		.copy {
+			text-align: left;
 			p {
 				font-size: 16pt;
 			}
@@ -30,7 +34,7 @@
 		}
 	}
 }
-@media (min-width: 767px) {
+@media (max-width: 767px) {
 	#fbsection1 {
 		text-align: center;
 		.copy {

@@ -774,15 +774,19 @@ html, body,
   .iphone ul li {
     line-height: 14pt; } }
 @media (max-width: 1024px) {
-  #fbsection1 .copy p {
-    font-size: 16pt; }
+  #fbsection1 .logo {
+    margin-top: 15px; }
+  #fbsection1 .copy {
+    text-align: left; }
+    #fbsection1 .copy p {
+      font-size: 16pt; }
 
   .navigation .app {
     top: 12px; }
     .navigation .app .link svg {
       width: 105px;
       height: auto; } }
-@media (min-width: 767px) {
+@media (max-width: 767px) {
   #fbsection1 {
     text-align: center; }
     #fbsection1 .copy {

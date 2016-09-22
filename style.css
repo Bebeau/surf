@@ -782,7 +782,7 @@ html, body,
     .navigation .app .link svg {
       width: 105px;
       height: auto; } }
-@media (max-width: 768px) {
+@media (min-width: 767px) {
   #fbsection1 {
     text-align: center; }
     #fbsection1 .copy {
@@ -823,13 +823,15 @@ html, body,
       display: none; }
     .navigation .logo {
       width: 50px; }
-    .navigation .app .link {
-      width: auto; }
-      .navigation .app .link:last-child {
-        float: none; }
-      .navigation .app .link svg {
-        height: 41px;
-        width: 121px; }
+    .navigation .app {
+      top: 6px; }
+      .navigation .app .link {
+        width: auto; }
+        .navigation .app .link:last-child {
+          float: none; }
+        .navigation .app .link svg {
+          height: 41px;
+          width: 121px; }
 
   #fbsection1 {
     height: 100vh; }
@@ -839,8 +841,9 @@ html, body,
         display: none; }
     #fbsection1 .copy {
       text-align: center;
-      margin: 0;
-      font-size: 10pt; }
+      margin: 0; }
+      #fbsection1 .copy p {
+        font-size: 10pt; }
       #fbsection1 .copy h3 {
         font-size: 24pt; }
     #fbsection1 #download a {

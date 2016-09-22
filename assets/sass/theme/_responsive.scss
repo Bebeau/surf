@@ -30,7 +30,7 @@
 		}
 	}
 }
-@media (max-width: 768px) {
+@media (min-width: 767px) {
 	#fbsection1 {
 		text-align: center;
 		.copy {
@@ -89,6 +89,7 @@
 			width: 50px;
 		}
 		.app {
+			top: 6px;
 			.link {
 				width: auto;
 				&:last-child {
@@ -112,10 +113,12 @@
 		.copy {
 			text-align: center;
 			margin: 0;
+			p {
+				font-size: 10pt;
+			}
 			h3 {
 				font-size: 24pt;
 			}
-			font-size: 10pt;
 		}
 		#download {
 			a {

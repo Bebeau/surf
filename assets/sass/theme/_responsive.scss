@@ -148,6 +148,9 @@
 				display: block;
 				box-sizing: border-box;
 				margin: 0 auto 15px;
+				&:last-child {
+					margin: 0 auto !important;
+				}
 			}
 		}
 	}

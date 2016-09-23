@@ -907,6 +907,8 @@ html, body,
       display: block;
       box-sizing: border-box;
       margin: 0 auto 15px; }
+      #fbsection1 #download a:last-child {
+        margin: 0 auto !important; }
 
   .iphone {
     height: auto; }

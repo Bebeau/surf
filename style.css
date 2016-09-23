@@ -886,7 +886,9 @@ html, body,
           float: none; }
         .navigation .app .link img {
           height: 41px;
-          width: 121px; }
+          width: 121px;
+          display: block;
+          margin: 0 auto; }
 
   #fbsection1 {
     height: 100vh; }
@@ -904,7 +906,7 @@ html, body,
     #fbsection1 #download a {
       display: block;
       box-sizing: border-box;
-      margin-bottom: 15px; }
+      margin: 0 auto 15px; }
       #fbsection1 #download a:last-child {
         margin-left: 0; }
 

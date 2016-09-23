@@ -119,6 +119,8 @@
 				img {
 					height: 41px;
 					width: 121px;
+					display: block;
+					margin: 0 auto;
 				}
 			}
 		}
@@ -145,7 +147,7 @@
 			a {
 				display: block;
 				box-sizing: border-box;
-				margin-bottom: 15px;
+				margin: 0 auto 15px;
 				&:last-child {
 					margin-left: 0;
 				}

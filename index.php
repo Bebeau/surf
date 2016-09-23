@@ -55,6 +55,7 @@ get_header();
 						echo '</div>';
 					echo '</div>';
 				echo '</div></div>';
+				echo '<div class="arrow"><i class="fa fa-angle-down"></i></div>';
 			echo '</section>';
 		endwhile;
 		wp_reset_query();
@@ -178,12 +179,6 @@ get_header();
 		echo '</section>';
 
 	echo '</div>'; ?>
-
-	<script>
-		$(function() {
-			cbpFixedScrollLayout.init();
-		});
-	</script>
 
 <?php get_footer(); 
 

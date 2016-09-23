@@ -9,6 +9,18 @@
 			}
 		}
 	}
+	.navigation {
+		.app {
+			top: 8px;
+			.link {
+				display: inline-block;
+				img {
+					width: 125px;
+					height: auto;
+				}
+			}
+		}
+	}
 }
 @media (max-width: 1024px) {
 	#fbsection1 {
@@ -30,7 +42,8 @@
 		.app {
 			top: 12px;
 			.link {
-				svg {
+				display: inline-block;
+				img {
 					width: 105px;
 					height: auto;
 				}
@@ -103,7 +116,7 @@
 				&:last-child {
 					float: none;
 				}
-				svg {
+				img {
 					height: 41px;
 					width: 121px;
 				}
@@ -169,7 +182,7 @@
 			padding-top: 525px;
 			article {
 				box-sizing: border-box;
-				padding: 25px;
+				padding: 100px 25px;
 			}
 			ul {
 				margin-left: 20px;

@@ -134,7 +134,7 @@ function emailSubmit() {
 
         if ( $firstname && $lastname && $emailaddress && $message ) {
 
-            $subject = "Wyzerr Contact Lead";
+            $subject = "Surf Lead";
 
             $headers = 'From:' . $email . "\r\n";
             $headers .= 'Reply-To:' . $to . "\r\n";

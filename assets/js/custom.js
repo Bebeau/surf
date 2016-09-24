@@ -224,8 +224,6 @@ var init = {
             data: {
             	firstname: jQuery('#firstname').val(),
             	lastname: jQuery('#lastname').val(),
-            	company: jQuery('#company').val(),
-            	title: jQuery('#title').val(),
             	emailaddress: jQuery('#emailaddress').val(),
             	interest: jQuery('#interest').val(),
             	message: jQuery('#message').val(),

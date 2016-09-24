@@ -40,10 +40,10 @@ get_header();
 				echo '<div class="outer"><div class="inner">';
 					echo '<div class="container">';
 						echo '<div class="row" data-animation="slideUp">';
-							echo '<div class="col-lg-5 col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-5">';
+							echo '<div class="col-lg-5 col-lg-offset-1 col-md-4 col-md-offset-1">';
 								echo '<img class="logo" src="'.get_bloginfo('template_directory').'/assets/images/logo.svg" alt="Surf">';
 							echo '</div>';
-							echo '<div class="col-lg-6 col-md-7 col-sm-7 copy">';
+							echo '<div class="col-lg-6 col-md-7 copy">';
 								echo '<div class="outer"><div class="inner">';
 									the_content();
 									echo '<div id="download">';
@@ -55,6 +55,7 @@ get_header();
 						echo '</div>';
 					echo '</div>';
 				echo '</div></div>';
+				echo '<div class="arrow"><i class="fa fa-angle-down"></i></div>';
 			echo '</section>';
 		endwhile;
 		wp_reset_query();
@@ -172,18 +173,12 @@ get_header();
 					</div>
 				<?php }
 				get_contactForm();
+				echo '<p id="legal">&copy; '.date("Y").' Surf Live, Inc.</p>';
 			echo '</div></div>';
 			echo '<div id="instafeed"></div>';
-			echo '<p id="legal">&copy; '.date("Y").' Copyright Surf Live, Inc.</p>';
 		echo '</section>';
 
 	echo '</div>'; ?>
-
-	<script>
-		$(function() {
-			cbpFixedScrollLayout.init();
-		});
-	</script>
 
 <?php get_footer(); 
 

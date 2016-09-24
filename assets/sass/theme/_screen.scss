@@ -142,22 +142,13 @@ ul {
 		position: absolute;
 		top: 6px;
 		right: 5px;
+		text-align: right;
 		.link {
 			width: 48%;
 			display: inline-block;
-			&:first-child {
-				margin-right: 5px;
-			}
-			&:last-child {
-				float: right;
-			}
-			svg {
-				g, path, text, tspan {
-					fill: white;
-				}
-				use {
-					stroke: white;
-				}
+			img {
+				width: 145px;
+				height: auto;
 			}
 			&:hover {
 				cursor: pointer;
@@ -201,6 +192,20 @@ ul {
 #fbsection1 {
 	text-align: center;
 	z-index: 10;
+	position: relative;
+	.arrow {
+		position: absolute;
+		bottom: 25px;
+		left: 50%;
+		z-index: 10;
+		@include animation(bounce);
+        @include animation-duration(2s);
+        @include animation-iteration-count(infinite);
+		i {
+			font-size: 16pt;
+			color: white;
+		}
+	}
 	video {
 		min-height: 100%;
 		min-width: 100%;
@@ -232,28 +237,17 @@ ul {
 		margin-top: 25px;
 		a {
 			display: inline-block;
+			width: 200px;
 			&:last-child {
 				margin-left: 15px;
 			}
-			svg {
-				max-width: 100%;
+			img {
+				min-width: 100%;
 			}
 		}
 	}
 	.col-sm-4 {
 		height: auto;
-	}
-	svg {
-		border: 1px solid white;
-		@include border-top-radius(3px);
-		@include border-bottom-radius(3px);
-		g, path, text, tspan {
-			fill: white;
-		}
-		use {
-			stroke: white;
-			display: none;
-		}
 	}
 }
 #fbsection2 {
@@ -272,7 +266,7 @@ ul {
 }
 #fbsection5 {
 	position: relative;
-	height: 100vh;
+	min-height: 100vh;
 	overflow: hidden;
 	color: white;
 	z-index: 10;
@@ -322,7 +316,7 @@ ul {
 		box-sizing: border-box;
 		padding: 0 25px;
 		width: 800px;
-		margin: 50px auto 0;
+		margin: 25px auto 0;
 		&:after {
 			content: "";
 			clear: both;
@@ -451,7 +445,7 @@ ul {
 			list-style: none;
 			margin: 0;
 			padding: 0;
-			background: white;
+			background: black;
 			border: 1px solid black;
 			border-top: none;
 			box-sizing: border-box;
@@ -463,10 +457,10 @@ ul {
 				line-height: 40px;
 				display: block;
 				padding: 0 10px;
-				color: black;
+				color: white;
 				&:hover {
-					color: black;
-					background: darken(white, 5%);
+					color: white;
+					background: lighten(black, 5%);
 					cursor: pointer;
 				}
 			}
@@ -478,9 +472,8 @@ ul {
 		}
 	}
 	#legal {
-		position: absolute;
+		position: relative;
 		text-align: center;
-		bottom: 25px;
 		width: 100%;
 		color: #666;
 		z-index: 999;
@@ -562,7 +555,7 @@ html, body,
 	}
 }
 .socialWrap {
-	margin-top: 25px;
+	margin-top: 15px;
 	display: block;
 	line-height: normal;
 	vertical-align: top;

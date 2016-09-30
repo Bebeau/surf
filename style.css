@@ -892,6 +892,8 @@ html, body,
 
   #fbsection1 {
     height: 100vh; }
+    #fbsection1 .arrow {
+      bottom: 100px; }
     #fbsection1 .videoWrap {
       background: url("assets/images/bg.jpg") no-repeat scroll center/cover; }
       #fbsection1 .videoWrap video {

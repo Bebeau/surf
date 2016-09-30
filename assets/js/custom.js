@@ -180,7 +180,7 @@ var init = {
             resolution: 'standard_resolution',
             template: '<div><img src="{{image}}" alt="" /></div>',
             limit: 60,
-            sortBy: 'most-recent'
+            sortBy: 'most-liked'
         });
         userFeed.run();
 	},

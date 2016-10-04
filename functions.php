@@ -129,7 +129,7 @@ function emailSubmit() {
         $interest = isset( $_POST['interest'] ) ? $_POST['interest'] : "";
         $message = isset( $_POST['message'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['message'] ) : "";
 
-        $email = 'info@getsurfapp.com');
+        $email = 'info@getsurfapp.com';
         $to = $firstname.' '.$lastname.' <'.$emailaddress.'>';
 
         if ( $firstname && $lastname && $emailaddress && $message ) {

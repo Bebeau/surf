@@ -131,10 +131,11 @@
 			@include transform(translate(0,-25px));
 		}
 		.arrow {
-			bottom: 75px;
+			bottom: 125px;
 		}
 		.videoWrap {
 			background: url('assets/images/bg.jpg') no-repeat scroll center / cover;
+			background-position-x: -178px;
 			video {
 				display: none;
 			}
@@ -291,7 +292,7 @@
 			font-size: 10pt;
 		}
 		.arrow {
-			bottom: 50px;
+			bottom: 75px;
 		}
 	}
 }

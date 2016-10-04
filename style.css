@@ -919,9 +919,10 @@ html, body,
       -o-transform: translate(0, -25px);
       transform: translate(0, -25px); }
     #fbsection1 .arrow {
-      bottom: 75px; }
+      bottom: 125px; }
     #fbsection1 .videoWrap {
-      background: url("assets/images/bg.jpg") no-repeat scroll center/cover; }
+      background: url("assets/images/bg.jpg") no-repeat scroll center/cover;
+      background-position-x: -178px; }
       #fbsection1 .videoWrap video {
         display: none; }
     #fbsection1 .copy {
@@ -1037,4 +1038,4 @@ html, body,
   #fbsection1 .copy {
     font-size: 10pt; }
   #fbsection1 .arrow {
-    bottom: 50px; } }
+    bottom: 75px; } }

@@ -393,6 +393,12 @@ ul {
 		background: transparent;
 		border: 1px solid white;
 		color: white;
+		z-index: 99;
+		&:after {
+			content: "";
+			clear: both;
+			display: block;
+		}
 		i {
 			padding-right: 10px;
 			margin: 0 10px 0 0;

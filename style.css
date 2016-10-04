@@ -591,7 +591,12 @@ ul {
     border-bottom-right-radius: 0;
     background: transparent;
     border: 1px solid white;
-    color: white; }
+    color: white;
+    z-index: 99; }
+    #fbsection5 .btn-submit:after {
+      content: "";
+      clear: both;
+      display: block; }
     #fbsection5 .btn-submit i {
       padding-right: 10px;
       margin: 0 10px 0 0;

@@ -129,7 +129,7 @@ function emailSubmit() {
         $interest = isset( $_POST['interest'] ) ? $_POST['interest'] : "";
         $message = isset( $_POST['message'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['message'] ) : "";
 
-        $email = 'Surf App <'.esc_attr(get_option('admin_email').'>');
+        $email = "kyle@theinitgroup.com";
         $to = $firstname.' '.$lastname.' <'.$emailaddress.'>';
 
         if ( $firstname && $lastname && $emailaddress && $message ) {
@@ -156,7 +156,7 @@ function emailSubmit() {
             $key = esc_attr(get_option('mailchimp_api'));
             $list = esc_attr(get_option('mailchimp_list'));
 
-            if($success && !empty($key) && !empty($list)) {
+            if(!empty($key) && !empty($list)) {
 
                 $auth = base64_encode( 'user:'.$key );
 

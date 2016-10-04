@@ -251,6 +251,12 @@ img {
 * {
   vertical-align: middle; }
 
+a {
+  color: #ed1b24; }
+  a:hover {
+    color: #ed1b24;
+    cursor: pointer; }
+
 .outer {
   /* W3C */
   display: inline-flex !important;
@@ -477,6 +483,8 @@ ul {
   z-index: 10; }
   #fbsection5 .outer {
     z-index: 3; }
+  #fbsection5 .inner {
+    padding: 50px 0; }
   #fbsection5 h2 {
     text-align: center; }
   #fbsection5:after {
@@ -670,6 +678,13 @@ ul {
     color: #666;
     z-index: 999;
     letter-spacing: 1px; }
+
+#singlePage {
+  width: 1170px;
+  margin: 100px auto;
+  font-size: 14pt; }
+  #singlePage p {
+    margin: 25px 0; }
 
 .col-sm-4 {
   height: 600px; }

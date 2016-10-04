@@ -173,7 +173,7 @@ get_header();
 					</div>
 				<?php }
 				get_contactForm();
-				echo '<p id="legal">&copy; '.date("Y").' Surf Live, Inc.</p>';
+				echo '<p id="legal">&copy; '.date("Y").' Surf Live, Inc. - <a href="'.get_permalink(32).'" target="_blank">Terms &amp; Conditions</a></p>';
 			echo '</div></div>';
 			echo '<div id="instafeed"></div>';
 		echo '</section>';

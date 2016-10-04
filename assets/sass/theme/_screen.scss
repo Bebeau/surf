@@ -48,6 +48,13 @@ img {
 * {
 	vertical-align: middle;
 }
+a {
+	color: $red;
+	&:hover {
+		color: $red;
+		cursor: pointer;
+	}
+}
 .outer {
 	/* W3C */
 	display: inline-flex !important;
@@ -273,6 +280,9 @@ ul {
 	.outer {
 		z-index: 3;
 	}
+	.inner {
+		padding: 50px 0;
+	}
 	h2 {
 		text-align: center;
 	}
@@ -478,6 +488,14 @@ ul {
 		color: #666;
 		z-index: 999;
 		letter-spacing: 1px;
+	}
+}
+#singlePage {
+	width: 1170px;
+	margin: 100px auto;
+	font-size: 14pt;
+	p {
+		margin: 25px 0;
 	}
 }
 .col-sm-4 {

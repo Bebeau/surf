@@ -912,8 +912,14 @@ html, body,
 
   #fbsection1 {
     height: 100vh; }
+    #fbsection1 .container {
+      -webkit-transform: translate(0, -25px);
+      -moz-transform: translate(0, -25px);
+      -ms-transform: translate(0, -25px);
+      -o-transform: translate(0, -25px);
+      transform: translate(0, -25px); }
     #fbsection1 .arrow {
-      bottom: 100px; }
+      bottom: 75px; }
     #fbsection1 .videoWrap {
       background: url("assets/images/bg.jpg") no-repeat scroll center/cover; }
       #fbsection1 .videoWrap video {
@@ -1029,4 +1035,6 @@ html, body,
     font-size: 13pt; } }
 @media (max-width: 375px) {
   #fbsection1 .copy {
-    font-size: 10pt; } }
+    font-size: 10pt; }
+  #fbsection1 .arrow {
+    bottom: 50px; } }

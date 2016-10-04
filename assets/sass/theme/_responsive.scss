@@ -127,8 +127,11 @@
 	}
 	#fbsection1 {
 		height: 100vh;
+		.container {
+			@include transform(translate(0,-25px));
+		}
 		.arrow {
-			bottom: 100px;
+			bottom: 75px;
 		}
 		.videoWrap {
 			background: url('assets/images/bg.jpg') no-repeat scroll center / cover;
@@ -286,6 +289,9 @@
 	#fbsection1 {
 		.copy {
 			font-size: 10pt;
+		}
+		.arrow {
+			bottom: 50px;
 		}
 	}
 }

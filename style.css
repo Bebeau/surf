@@ -877,7 +877,14 @@ html, body,
       width: 163px; }
 
   #fbsection5 #contactfrm {
-    width: 600px; } }
+    width: 600px; }
+
+  #singlePage {
+    width: 100%;
+    padding: 25px;
+    margin: 0; }
+    #singlePage p {
+      font-size: 12pt; } }
 @media (max-width: 767px) {
   .no-mobile {
     display: none !important; }

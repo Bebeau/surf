@@ -84,6 +84,14 @@
 			width: 600px;
 		}
 	}
+	#singlePage {
+		width: 100%;
+		padding: 25px;
+		margin: 0;
+		p {
+			font-size: 12pt;
+		}
+	}
 }
 @media (max-width: 767px) {
 	.no-mobile {

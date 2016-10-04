@@ -129,7 +129,7 @@ function emailSubmit() {
         $interest = isset( $_POST['interest'] ) ? $_POST['interest'] : "";
         $message = isset( $_POST['message'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['message'] ) : "";
 
-        $email = "kyle@theinitgroup.com";
+        $email = 'Surf App <'.esc_attr(get_option('admin_email').'>');
         $to = $firstname.' '.$lastname.' <'.$emailaddress.'>';
 
         if ( $firstname && $lastname && $emailaddress && $message ) {

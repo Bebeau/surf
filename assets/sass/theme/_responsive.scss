@@ -21,6 +21,19 @@
 			}
 		}
 	}
+	#fbsection5 {
+		.inner {
+			padding: 150px 0;
+		}
+		#instafeed {
+			-webkit-column-count: 4;
+			-webkit-column-gap: 0;
+			-moz-column-count: 4;
+			-moz-column-gap: 0;
+			column-count: 4;
+			column-gap: 0;
+		}
+	}
 }
 @media (max-width: 1024px) {
 	#fbsection1 {
@@ -36,10 +49,6 @@
 	}
 	#fbsection5 {
 		min-height: auto;
-		padding-top: 100px;
-		.inner {
-			padding: 150px 0;
-		}
 	}
 	.navigation {
 		.app {

@@ -478,13 +478,12 @@ ul {
 #fbsection5 {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
+  height: auto;
   color: white;
   z-index: 10; }
   #fbsection5 .outer {
-    z-index: 3; }
-  #fbsection5 .inner {
-    padding: 50px 0; }
+    z-index: 3;
+    min-height: 100vh; }
   #fbsection5 h2 {
     text-align: center; }
   #fbsection5:after {
@@ -851,7 +850,17 @@ html, body,
       display: inline-block; }
       .navigation .app .link img {
         width: 125px;
-        height: auto; } }
+        height: auto; }
+
+  #fbsection5 .inner {
+    padding: 150px 0; }
+  #fbsection5 #instafeed {
+    -webkit-column-count: 4;
+    -webkit-column-gap: 0;
+    -moz-column-count: 4;
+    -moz-column-gap: 0;
+    column-count: 4;
+    column-gap: 0; } }
 @media (max-width: 1024px) {
   #fbsection1 .logo {
     margin-top: 15px; }
@@ -861,10 +870,7 @@ html, body,
       font-size: 16pt; }
 
   #fbsection5 {
-    min-height: auto;
-    padding-top: 100px; }
-    #fbsection5 .inner {
-      padding: 150px 0; }
+    min-height: auto; }
 
   .navigation .app {
     top: 12px; }

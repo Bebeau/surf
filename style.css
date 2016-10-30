@@ -682,7 +682,21 @@ ul {
     width: 100%;
     color: #666;
     z-index: 999;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    vertical-align: top; }
+    #fbsection5 #legal a {
+      color: white;
+      margin: 0;
+      padding: 0;
+      -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -moz-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+      #fbsection5 #legal a:hover {
+        color: #ed1b24;
+        text-decoration: none;
+        -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        -moz-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
 #singlePage {
   width: 1170px;
@@ -847,8 +861,10 @@ html, body,
       font-size: 16pt; }
 
   #fbsection5 {
-    height: auto;
+    min-height: auto;
     padding-top: 100px; }
+    #fbsection5 .inner {
+      padding: 150px 0; }
 
   .navigation .app {
     top: 12px; }

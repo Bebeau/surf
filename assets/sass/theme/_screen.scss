@@ -494,6 +494,18 @@ ul {
 		color: #666;
 		z-index: 999;
 		letter-spacing: 1px;
+		vertical-align: top;
+		a {
+			color: white;
+			margin: 0;
+			padding: 0;
+			@include transition(all 0.3s $easeInOutBack);
+			&:hover {
+				color: $red;
+				text-decoration: none;
+				@include transition(all 0.3s $easeInOutBack);
+			}
+		}
 	}
 }
 #singlePage {

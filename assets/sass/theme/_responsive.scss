@@ -35,8 +35,11 @@
 		}
 	}
 	#fbsection5 {
-		height: auto;
+		min-height: auto;
 		padding-top: 100px;
+		.inner {
+			padding: 150px 0;
+		}
 	}
 	.navigation {
 		.app {

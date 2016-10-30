@@ -277,6 +277,7 @@ ul {
 	height: auto;
 	color: white;
 	z-index: 10;
+	overflow-x: hidden;
 	.outer {
 		z-index: 3;
 		min-height: 100vh;

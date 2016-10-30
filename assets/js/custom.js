@@ -170,6 +170,13 @@ var init = {
 		        scrollTop: jQuery(hash).offset().top
 		    }, 1000);
 		});
+		jQuery(".arrow").click(function(e){
+			e.preventDefault();
+			var hash = "#fbsection2";
+			jQuery('html, body').animate({
+		        scrollTop: jQuery(hash).offset().top
+		    }, 1000);
+		});
 	},
 	instafeed: function() {
 		var userFeed = new Instafeed({

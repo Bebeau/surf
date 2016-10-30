@@ -482,6 +482,8 @@ ul {
   color: white;
   z-index: 10;
   overflow-x: hidden; }
+  #fbsection5 .inner {
+    padding: 150px 0; }
   #fbsection5 .outer {
     z-index: 3;
     min-height: 100vh; }
@@ -853,8 +855,6 @@ html, body,
         width: 125px;
         height: auto; }
 
-  #fbsection5 .inner {
-    padding: 150px 0; }
   #fbsection5 #instafeed {
     -webkit-column-count: 4;
     -webkit-column-gap: 0;

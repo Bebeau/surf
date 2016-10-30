@@ -9,7 +9,7 @@
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<meta name="google-site-verification" content="" />
 
-	<title><?php wp_title(); ?></title>
+	<title><?php echo bloginfo('name'); ?></title>
 	<meta name="keywords" content="" />
 	<meta name="author" content="The INiT Group">
 	

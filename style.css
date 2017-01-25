@@ -128,6 +128,7 @@ Author URI: http://theinitgroup.com
     -webkit-transform: translateY(-10px); }
   60% {
     -webkit-transform: translateY(-5px); } }
+
 @-moz-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -moz-transform: translateY(0); }
@@ -135,6 +136,7 @@ Author URI: http://theinitgroup.com
     -moz-transform: translateY(-10px); }
   60% {
     -moz-transform: translateY(-5px); } }
+
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -webkit-transform: translateY(0);
@@ -154,6 +156,7 @@ Author URI: http://theinitgroup.com
     -ms-transform: translateY(-5px);
     -o-transform: translateY(-5px);
     transform: translateY(-5px); } }
+
 @media (max-width: 768px) {
   [data-animation="slideUp"] {
     opacity: 1;
@@ -165,7 +168,6 @@ Author URI: http://theinitgroup.com
     -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     -moz-transition: -moz-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-
   [data-animation="textFade"] {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -178,7 +180,6 @@ Author URI: http://theinitgroup.com
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
     transform: translate(0, 0); }
-
   [data-animation="slideDown"] {
     opacity: 1;
     -webkit-transform: translate(0, 0);
@@ -189,21 +190,18 @@ Author URI: http://theinitgroup.com
     -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     -moz-transition: -moz-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-
   [data-animation="slideInLeft"] {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
     transform: translate(0, 0); }
-
   [data-animation="slideInRight"] {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
     transform: translate(0, 0); }
-
   [data-animation="bubble"] {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -211,16 +209,19 @@ Author URI: http://theinitgroup.com
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1); } }
+
 @font-face {
   font-family: 'Brandon';
   src: url("assets/fonts/Brandon_bld.otf") format("opentype");
   font-weight: 100;
   font-style: normal; }
+
 @font-face {
   font-family: 'Ventor';
   src: url("assets/fonts/texgyreadventor-regular.otf") format("opentype");
   font-weight: 100;
   font-style: normal; }
+
 body, html {
   margin: 0;
   padding: 0; }
@@ -394,7 +395,7 @@ ul {
   .videoWrap video {
     width: 210px;
     height: auto;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-49%, -50%);
@@ -425,6 +426,7 @@ ul {
       font-size: 16pt;
       color: white; }
   #fbsection1 video {
+    position: absolute;
     min-height: 100%;
     min-width: 100%;
     width: auto;
@@ -463,15 +465,15 @@ ul {
 
 #fbsection2 {
   color: white;
-  background: url("assets/images/phone_white.svg") no-repeat fixed center/contain black;
+  background: url("assets/images/phone_white.svg") no-repeat scroll center/contain black;
   background-size: auto 500px; }
 
 #fbsection3 {
-  background: url("assets/images/phone.svg") no-repeat fixed center/contain white;
+  background: url("assets/images/phone.svg") no-repeat scroll center/contain white;
   background-size: auto 500px; }
 
 #fbsection4 {
-  background: url("assets/images/phone_white.svg") no-repeat fixed center/contain #ed1b24;
+  background: url("assets/images/phone_white.svg") no-repeat scroll center/contain #ed1b24;
   background-size: auto 500px;
   color: white; }
 
@@ -482,8 +484,6 @@ ul {
   color: white;
   z-index: 10;
   overflow-x: hidden; }
-  #fbsection5 .inner {
-    padding: 150px 0; }
   #fbsection5 .outer {
     z-index: 3;
     min-height: 100vh; }
@@ -830,8 +830,10 @@ html, body,
   -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   -moz-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+
 .iphone .sectionTitle {
   text-align: right; }
+
 .iphone h2 {
   display: inline-block;
   text-align: left; }
@@ -843,10 +845,8 @@ html, body,
 @media (max-width: 1200px) {
   body {
     font-size: 13px; }
-
   .iphone ul li {
     line-height: 14pt; }
-
   .navigation .app {
     top: 8px; }
     .navigation .app .link {
@@ -854,7 +854,8 @@ html, body,
       .navigation .app .link img {
         width: 125px;
         height: auto; }
-
+  #fbsection5 .inner {
+    padding: 150px 0; }
   #fbsection5 #instafeed {
     -webkit-column-count: 4;
     -webkit-column-gap: 0;
@@ -862,6 +863,7 @@ html, body,
     -moz-column-gap: 0;
     column-count: 4;
     column-gap: 0; } }
+
 @media (max-width: 1024px) {
   #fbsection1 .logo {
     margin-top: 15px; }
@@ -869,10 +871,8 @@ html, body,
     text-align: left; }
     #fbsection1 .copy p {
       font-size: 16pt; }
-
   #fbsection5 {
     min-height: auto; }
-
   .navigation .app {
     top: 12px; }
     .navigation .app .link {
@@ -880,6 +880,7 @@ html, body,
       .navigation .app .link img {
         width: 105px;
         height: auto; } }
+
 @media (max-width: 767px) {
   #fbsection1 {
     text-align: center; }
@@ -889,7 +890,6 @@ html, body,
       text-align: center; }
     #fbsection1 #download {
       text-align: center; }
-
   #fbsection2, #fbsection3, #fbsection4 {
     background-size: auto 400px; }
     #fbsection2 .sectionTitle h2, #fbsection3 .sectionTitle h2, #fbsection4 .sectionTitle h2 {
@@ -898,29 +898,24 @@ html, body,
       padding-right: 25px; }
     #fbsection2 .videoWrap video, #fbsection3 .videoWrap video, #fbsection4 .videoWrap video {
       width: 163px; }
-
   #fbsection5 #contactfrm {
     width: 600px; }
-
   #singlePage {
     width: 100%;
     padding: 25px;
     margin: 0; }
     #singlePage p {
       font-size: 12pt; } }
+
 @media (max-width: 767px) {
   .no-mobile {
     display: none !important; }
-
   .mobile {
     display: block !important; }
-
   .cbp-fbscroller nav {
     display: none; }
-
   .logo {
     width: 150px; }
-
   .navigation {
     height: 55px;
     background: black; }
@@ -939,7 +934,6 @@ html, body,
           width: 121px;
           display: block;
           margin: 0 auto; }
-
   #fbsection1 {
     height: 100vh; }
     #fbsection1 .container {
@@ -968,7 +962,6 @@ html, body,
       margin: 0 auto 15px; }
       #fbsection1 #download a:last-child {
         margin: 0 auto !important; }
-
   .iphone {
     height: auto; }
     .iphone h2 {
@@ -1019,10 +1012,8 @@ html, body,
       color: white; }
       .iphone.phone-7 .content article {
         background: #ed1b24; }
-
   .cbp-fbscroller section {
     height: auto; }
-
   #fbsection5 {
     height: auto;
     padding-top: 50px; }
@@ -1061,9 +1052,11 @@ html, body,
       margin: 25px 0; }
     #fbsection5 .btn-submit {
       width: 100%; } }
+
 @media (max-width: 414px) {
   #fbsection1 .copy {
     font-size: 13pt; } }
+
 @media (max-width: 375px) {
   #fbsection1 .copy {
     font-size: 10pt; }

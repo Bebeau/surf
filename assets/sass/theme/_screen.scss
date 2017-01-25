@@ -190,7 +190,7 @@ ul {
 	video {
 		width: 210px;
 		height: auto;
-		position: fixed;
+		position: absolute;
 		top: 50%;
 		left: 50%;
 		@include transform(translate(-49%,-50%));
@@ -214,6 +214,7 @@ ul {
 		}
 	}
 	video {
+		position: absolute;
 		min-height: 100%;
 		min-width: 100%;
 		width: auto;
@@ -259,15 +260,15 @@ ul {
 }
 #fbsection2 {
 	color: white;
-	background: url('assets/images/phone_white.svg') no-repeat fixed center / contain black;
+	background: url('assets/images/phone_white.svg') no-repeat scroll center / contain black;
 	background-size: auto 500px;
 }
 #fbsection3 {
-	background: url('assets/images/phone.svg') no-repeat fixed center / contain white;
+	background: url('assets/images/phone.svg') no-repeat scroll center / contain white;
 	background-size: auto 500px;
 }
 #fbsection4 {
-	background: url('assets/images/phone_white.svg') no-repeat fixed center / contain $red;
+	background: url('assets/images/phone_white.svg') no-repeat scroll center / contain $red;
 	background-size: auto 500px;
 	color: white;
 }

@@ -13,9 +13,9 @@ var cbpFixedScrollLayout = (function() {
 	// cache and initialize some values
 	var config = {
 		// the cbp-fbscroller's sections
-		$sections : $( '#featureWrap > section' ),
+		$sections : $( '#cbp-fbscroller > section' ),
 		// the navigation links
-		$navlinks : $( '.wrap > nav:first > a' ),
+		$navlinks : $( '#cbp-fbscroller > nav:first > a' ),
 		// index of current link / section
 		currentLink : 0,
 		// the body element
